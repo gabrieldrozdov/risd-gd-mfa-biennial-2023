@@ -215,7 +215,7 @@ function getPos(cell) {
 
 // Set and reset position
 let currentPos = [10, 1];
-let scale = 98;
+let scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
 let player = document.createElement("div");
 player.classList.add("map-player");
 window.addEventListener('resize', resetPosition);
@@ -229,6 +229,7 @@ function resetPosition() {
 	if (window.innerWidth > 800 && initialized == true) {
 		sidebar.dataset.active = "1";
 	}
+	scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
 	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
 	map.style.top = mapContainer.offsetHeight/2 - scale/2 - currentPos[1]*scale + "px";
 	map.style.left = mapContainer.offsetWidth/2 - scale/2 - currentPos[0]*scale + "px";
@@ -283,8 +284,21 @@ function move(direction) {
 	}
 }
 
+// Populate map
+// function populateMap(project) {
+// 	let indicator = document.createElement("div");
+// 	let projectType = project["category"];
+// 	let targetPos = project["pos"];
+// 	let targetNode = map.querySelector(`[data-pos="${projectPos}"]`);
+// 	indicator.addEventListener("click", () => {
 
+// 	});
+// 	targetNode.appendChild(indicator);
+// }
 
+// for (let project of projects) {
+// 	populateMap(project);
+// }
 
 
 // ————————————————————————————————————————————————————————————
@@ -301,8 +315,8 @@ function closeSidebar() {
 }
 
 const documentHeight = () => {
-	const doc = document.documentElement
-	doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+	const doc = document.documentElement;
+	doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
 }
 window.addEventListener("resize", documentHeight);
 documentHeight();
