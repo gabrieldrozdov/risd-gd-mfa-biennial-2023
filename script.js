@@ -122,6 +122,9 @@ fetch('catalog.json')
 	.then((response) => response.json())
 	.then((json) => {
 		projects = json;
+		for (let key of Object.keys(projects)) {
+			populateMap(projects[key]);
+		}
 	});
 
 let featuredProject = 0;
@@ -189,12 +192,17 @@ function setBounds(x1, y1, x2, y2) {
 		}
 	}
 }
+setBounds(0, 0, 3, 2);
+setBounds(0, 3, 2, 6);
+setBounds(0, 7, 1, 14);
+setBounds(0, 15, 2, 18);
 setBounds(6, 0, 7, 0);
 setBounds(12, 0, 41, 2);
 setBounds(12, 3, 35, 3);
 setBounds(10, 4, 35, 10);
 setBounds(39, 10, 41, 15);
 setBounds(6, 18, 7, 18);
+setBounds(34, 16, 34, 18);
 
 // Add clickable movement
 let mapCells = map.querySelectorAll('.map-cell');
@@ -224,6 +232,7 @@ function setPosition(targetPos) {
 	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
 	map.style.top = mapContainer.offsetHeight/2 - scale/2 - currentPos[1]*scale + "px";
 	map.style.left = mapContainer.offsetWidth/2 - scale/2 - currentPos[0]*scale + "px";
+	checkProject();
 }
 function resetPosition() {
 	if (window.innerWidth > 800 && initialized == true) {
@@ -240,22 +249,24 @@ resetPosition();
 body.addEventListener("keydown", checkKey);
 function checkKey(e) {
     e = e || window.event;
-    if (e.keyCode == '38') { // up arrow
-		move('up');
-		buttonPress('up');
-    }
-    else if (e.keyCode == '40') { // down arrow
-		move('down');
-		buttonPress('down');
-    }
-    else if (e.keyCode == '37') { // left arrow
-		move('left');
-		buttonPress('left');
-    }
-    else if (e.keyCode == '39') { // right arrow
-		move('right');
-		buttonPress('right');
-    }
+	if (featuredProject == 0) {
+		if (e.keyCode == '38') { // up arrow
+			move('up');
+			buttonPress('up');
+		}
+		else if (e.keyCode == '40') { // down arrow
+			move('down');
+			buttonPress('down');
+		}
+		else if (e.keyCode == '37') { // left arrow
+			move('left');
+			buttonPress('left');
+		}
+		else if (e.keyCode == '39') { // right arrow
+			move('right');
+			buttonPress('right');
+		}
+	}
 }
 
 // Press buttons if arrow keys used
@@ -282,23 +293,41 @@ function move(direction) {
 		currentPos = [currentPos[0]+1, currentPos[1]];
 		resetPosition();
 	}
+	checkProject();
+}
+
+// Check if current position is on a project
+function checkProject() {
+	let keys = Object.keys(projectPositions);
+	if (keys.includes(`[${currentPos[0]},${currentPos[1]}]`)) {
+		projectOpen(projectPositions[`[${currentPos[0]},${currentPos[1]}]`]);
+	}
 }
 
 // Populate map
-// function populateMap(project) {
-// 	let indicator = document.createElement("div");
-// 	let projectType = project["category"];
-// 	let targetPos = project["pos"];
-// 	let targetNode = map.querySelector(`[data-pos="${projectPos}"]`);
-// 	indicator.addEventListener("click", () => {
-
-// 	});
-// 	targetNode.appendChild(indicator);
-// }
-
-// for (let project of projects) {
-// 	populateMap(project);
-// }
+let projectPositions = {}
+function populateMap(project) {
+	let indicator = document.createElement("div");
+	indicator.classList.add("map-indicator");
+	let projectID = project["id"];
+	let projectType = project["category"];
+	if (projectType == "textile") {
+		indicator.innerHTML = '<img src="assets/ui/glyph-textile.svg">';
+	} else if (projectType == "installation") {
+		indicator.innerHTML = '<img src="assets/ui/glyph-installation.svg">';
+	} else if (projectType == "video") {
+		indicator.innerHTML = '<img src="assets/ui/glyph-video.svg">';
+	} else if (projectType == "print") {
+		indicator.innerHTML = '<img src="assets/ui/glyph-print.svg">';
+	} else if (projectType == "web") {
+		indicator.innerHTML = '<img src="assets/ui/glyph-web.svg">';
+	}
+	let targetPos = project["pos"];
+	let targetNode = map.querySelector(`[data-pos="${targetPos}"]`);
+	projectPositions[targetPos] = projectID;
+	console.log(targetNode);
+	targetNode.appendChild(indicator);
+}
 
 
 // ————————————————————————————————————————————————————————————
