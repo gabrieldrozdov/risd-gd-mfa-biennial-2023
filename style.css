@@ -348,7 +348,7 @@ body {
 /* PROJECT POPUP */
 .project-container {
 	width: 100vw;
-	height: 100vh;
+	height: var(--doc-height);
 	position: absolute;
 	padding: 40px;
 	top: 0;
@@ -363,7 +363,7 @@ body {
 	max-width: 800px;
 	width: 100%;
 	height: 100%;
-	border-radius: 75px;
+	border-radius: 40px;
 	background-color: var(--pink-dark);
 	position: relative;
 	transform: translateY(100vh);
@@ -420,11 +420,11 @@ body {
 }
 .project-content-close {
 	position:absolute;
-	top: 25px;
-	right: 25px;
-	width: 100px;
-	height: 100px;
-	padding: 15px;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -433,6 +433,10 @@ body {
 	background-color: var(--pink-dark);
 	box-shadow: inset -5px -5px 10px var(--pink-extradark), inset 5px 5px 10px var(--pink-light);
 	transition: fill .2s, box-shadow .2s, background-color .2s;
+}
+.project-content-close svg {
+	width: 100%;
+	height: 100%;
 }
 .project-content-close:hover {
 	background-color: var(--pink-light);
@@ -461,7 +465,7 @@ body {
 	top: 10px;
 	right: 10px;
 	width: 50px;
-	height: 50xp;
+	height: 50px;
 	padding: 10px;
 	display: flex;
 	align-items: center;
@@ -491,7 +495,7 @@ body {
 	top: 10px;
 	right: 10px;
 	width: 50px;
-	height: 50xp;
+	height: 50px;
 	padding: 5px;
 	display: none;
 	align-items: center;
@@ -520,10 +524,16 @@ body {
 	position: absolute;
 	bottom: -220px;
 	width: 100vw;
-	height: 200px;
+	height: 150px;
 	transition: bottom .5s ease-in-out;
 }
 @media only screen and (max-width: 800px) {
+	* {
+		cursor: default;
+	}
+	.cursor {
+		display: none !important;
+	}
 	.container {
 		grid-template-columns: 1fr;
 		height: var(--doc-height);
@@ -546,7 +556,7 @@ body {
 	.map-container {
 		position: absolute;
 		width: 100vw;
-		height: calc(var(--doc-height) - 200px);
+		height: calc(var(--doc-height) - 150px);
 		top: 0;
 		left: 0;
 	}
