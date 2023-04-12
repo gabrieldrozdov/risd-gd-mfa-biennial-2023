@@ -19,6 +19,7 @@
 	margin: 0;
 	padding: 0;
 	cursor: none;
+	touch-action: manipulation;
 }
 :root {
 	--green-superdark: #092f00;
@@ -473,6 +474,10 @@ body {
 	fill: var(--green-light);
 	transition: fill .2s, box-shadow .2s, background-color .2s, transform .5s;
 }
+.mobile-hamburger svg {
+	width: 100%;
+	height: 100%;
+}
 .mobile-hamburger:hover {
 	box-shadow: inset -10px -10px 10px var(--green-extradark), inset 10px 10px 10px var(--green-light);
 	fill: var(--green-extralight);
@@ -497,6 +502,10 @@ body {
 	color: var(--white);
 	fill: var(--green-light);
 	transition: fill .2s, box-shadow .2s, background-color .2s;
+}
+.sidebar-mobile-close svg {
+	width: 100%;
+	height: 100%;
 }
 .sidebar-mobile-close:hover {
 	box-shadow: inset -10px -10px 10px var(--green-extradark), inset 10px 10px 10px var(--green-light);
