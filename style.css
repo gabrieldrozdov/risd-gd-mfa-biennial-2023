@@ -32,6 +32,7 @@
 	--pink-extralight: #fcc7e4;
 	--white: #fafafa;
 	--gray: #7d7d7d;
+	--doc-height: 100%;
 }
 body {
 	font-family: Catalog, serif;
@@ -182,6 +183,7 @@ body {
 }
 .catalog-filter img, .catalog-filter svg {
 	height: 40px;
+	width: 40px;
 	transition: filter .2s;
 }
 
@@ -223,6 +225,7 @@ body {
 }
 .catalog-item-img svg {
 	width: 2em;
+	height: 2em;
 }
 .catalog-item-artist {
 	font-weight: bold;
@@ -263,6 +266,7 @@ body {
 }
 .controls svg {
 	width: 40px;
+	height: 40px;
 }
 #controls-up {
 	grid-area: up;
@@ -513,6 +517,7 @@ body {
 @media only screen and (max-width: 800px) {
 	.container {
 		grid-template-columns: 1fr;
+		height: var(--doc-height);
 	}
 	.logo[data-transition="1"] {
 		top: 65px;
@@ -532,7 +537,7 @@ body {
 	.map-container {
 		position: absolute;
 		width: 100vw;
-		height: calc(100vh - 200px);
+		height: calc(var(--doc-height) - 200px);
 		top: 0;
 		left: 0;
 	}
