@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HIGHLIGHTS FROM THE IMPERMANENT COLLECTION | RISD GD MFA BIENNIAL 2023</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="assets/ui/favicon.png">
 </head>
 <body>
 	<main class="container">
@@ -18,7 +19,11 @@
 			<source src="assets/ui/logo.mp4" type="video/mp4">
 		</video>
 		
-		<div class="sidebar">
+		<div class="sidebar" data-active="0">
+			<div class="sidebar-mobile-close" onclick="closeSidebar()">
+				<svg viewBox="0 0 24 24"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg>
+			</div>
+
 			<h1 class="title">
 				HIGHLIGHTS FROM THE<br>IMPERMANENT COLLECTION<br>
 				<em>APRIL 14–30, 2023</em>
@@ -26,236 +31,236 @@
 
 			<div class="catalog-filters">
 				<div id="filter-textile" class="catalog-filter" onclick="filter(this, 'textile')" data-active="0">
-					<img src="assets/ui/glyph-textile.svg">
+					<svg viewBox="0 0 282.49 282.49"><path d="m249.41,141.56c20.38-5.29,33.09-22.05,33.09-45.92,0-29.16-18.69-47.71-48.24-47.71-.12,0-.25,0-.37,0-5.53-20.1-22.33-32.26-46.26-32.26s-40.13,12.16-45.71,32.26c-.01,0-.03,0-.04,0-.3,0-.59.01-.88.02-.3,0-.6-.02-.9-.02-.12,0-.25,0-.37,0-5.53-20.1-22.33-32.26-46.26-32.26s-40.13,12.16-45.71,32.26c-.01,0-.03,0-.04,0C18.95,47.93,0,66.49,0,95.64c0,23.79,12.45,40.52,33.09,45.87C12.7,146.81,0,163.57,0,187.44c0,29.04,18.54,47.56,47.9,47.7,5.7,19.75,22.4,31.68,46.09,31.68s39.81-11.93,45.54-31.68c.36,0,.72.01,1.09.01.29,0,.57-.01.86-.02.19,0,.38.01.58.01,5.7,19.75,22.4,31.68,46.09,31.68s39.81-11.93,45.54-31.68c.36,0,.72.01,1.09.01,28.76,0,47.71-18.55,47.71-47.71,0-23.79-12.45-40.52-33.09-45.87Z"/></svg>
 				</div>
 				<div id="filter-installation" class="catalog-filter" onclick="filter(this, 'installation')" data-active="0">
-					<img src="assets/ui/glyph-installation.svg">
+					<svg viewBox="0 0 282.5 282.5"><path d="M235.1,95.9c0-0.4,0-0.7,0-1.1c0-28.8-18.6-47.7-47.7-47.7c-23.8,0-40.5,12.5-45.9,33.1 c-5.3-20.4-22.1-33.1-45.9-33.1c-29.2,0-47.7,18.7-47.7,48.2c0,0.1,0,0.2,0,0.4c-20.1,5.5-32.3,22.3-32.3,46.3 s12.2,40.1,32.3,45.7c0,0,0,0,0,0c0,28.8,18.5,47.7,47.7,47.7c23.8,0,40.5-12.4,45.9-33.1c5.3,20.4,22.1,33.1,45.9,33.1 c29,0,47.6-18.5,47.7-47.9c19.8-5.7,31.7-22.4,31.7-46.1S254.9,101.6,235.1,95.9L235.1,95.9z"/></svg>
 				</div>
 				<div id="filter-video" class="catalog-filter" onclick="filter(this, 'video')" data-active="0">
-					<img src="assets/ui/glyph-video.svg">
+					<svg viewBox="0 0 282.49 282.49"><path d="m48.38,180.09c-.29,2.47-.44,5.02-.44,7.67,0,28.76,18.55,47.71,47.71,47.71,2.6,0,5.11-.15,7.53-.44,1.44,1.79,3.01,3.54,4.73,5.26,20.33,20.33,46.85,20.62,67.47,0,1.71-1.71,3.28-3.46,4.7-5.24,2.37.28,4.82.43,7.36.43,29.15,0,47.71-18.69,47.71-48.24,0-2.38-.13-4.7-.38-6.94,1.88-1.48,3.72-3.12,5.52-4.91,20.62-20.62,20.52-46.95-.38-67.84-1.71-1.71-3.46-3.27-5.24-4.69.32-2.56.48-5.23.48-7.99,0-28.76-18.55-47.71-47.71-47.71-2.76,0-5.42.17-7.99.5-1.47-1.84-3.09-3.66-4.86-5.43-20.33-20.33-46.85-20.62-67.47,0-1.72,1.72-3.3,3.49-4.73,5.29-2.18-.23-4.43-.35-6.74-.35-29.15,0-47.71,18.69-47.71,48.24,0,2.2.11,4.33.32,6.41-2.06,1.59-4.08,3.36-6.05,5.33-20.62,20.62-20.52,46.95.37,67.84,1.88,1.88,3.82,3.59,5.79,5.13Z"/></svg>
 				</div>
 				<div id="filter-print" class="catalog-filter" onclick="filter(this, 'print')" data-active="0">
-					<img src="assets/ui/glyph-print.svg">
+					<svg viewBox="0 0 282.49 282.49"><path d="m269.46,77.62c0-39.39-25.41-65.35-65.35-65.35-32.59,0-55.51,17.05-62.83,45.32-7.25-27.92-30.21-45.32-62.9-45.32C38.45,12.27,13.03,37.86,13.03,78.34c0,32.3,17.09,55.56,45.26,62.89-28.17,7.27-45.26,30.45-45.26,63.64,0,39.39,25.41,65.35,65.35,65.35,32.59,0,55.51-17.05,62.83-45.32,7.25,27.92,30.21,45.32,62.9,45.32,39.93,0,65.35-25.59,65.35-66.07,0-32.3-17.09-55.56-45.26-62.89,28.17-7.27,45.26-30.45,45.26-63.64Z"/></svg>
 				</div>
 				<div id="filter-web" class="catalog-filter" onclick="filter(this, 'web')" data-active="0">
-					<img src="assets/ui/glyph-web.svg">
+					<svg viewBox="0 0 282.49 282.49"><path d="m204.11,12.27c-38.46,0-63.45,23.75-65.24,61.66h-.04c-39.58,0-64.89,25.15-65.34,65.01-37.11,2.01-60.47,27.13-60.47,65.94s25.41,65.35,65.35,65.35,64.89-25.15,65.34-65.01c35.68-1.94,58.65-25.24,60.36-61.53.01,0,.03,0,.04,0,39.93,0,65.35-25.59,65.35-66.07S244.05,12.27,204.11,12.27Z"/></svg>
 				</div>
 			</div>
 
 			<div class="catalog">
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="0" onclick="projectOpen('0')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">Kanga #2, 2022</p>
 						<p class="catalog-item-artist">Husna Abubakar</p>
+						<p class="catalog-item-name"><em>Kanga #2</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="installation">
-					<img src="assets/ui/glyph-installation.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="installation" data-id="1" onclick="projectOpen('1')">
+					<div class="catalog-item-img" data-glyph="installation"></div>
 					<div>
-						<p class="catalog-item-name">Psychic Slice, 2022</p>
 						<p class="catalog-item-artist">Michelle Belgrod</p>
+						<p class="catalog-item-name"><em>Psychic Slice</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="2" onclick="projectOpen('2')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">Composition generator, 2022</p>
 						<p class="catalog-item-artist">Kate Brown</p>
+						<p class="catalog-item-name"><em>Composition generator</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="web">
-					<img src="assets/ui/glyph-web.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="web" data-id="3" onclick="projectOpen('3')">
+					<div class="catalog-item-img" data-glyph="web"></div>
 					<div>
-						<p class="catalog-item-name">Spore Site, 2022</p>
 						<p class="catalog-item-artist">Lydia Chodosh</p>
+						<p class="catalog-item-name"><em>Spore Site</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="4" onclick="projectOpen('4')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">Two Hundred Eighty-Nine Dollar Quilt, 2022</p>
 						<p class="catalog-item-artist">Ben Denzer</p>
+						<p class="catalog-item-name"><em>Two Hundred Eighty-Nine Dollar Quilt</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="web">
-					<img src="assets/ui/glyph-web.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="web" data-id="5" onclick="projectOpen('5')">
+					<div class="catalog-item-img" data-glyph="web"></div>
 					<div>
-						<p class="catalog-item-name">Pixel Weaver, 2022</p>
 						<p class="catalog-item-artist">Gabriel Drozdov</p>
+						<p class="catalog-item-name"><em>Pixel Weaver</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="6" onclick="projectOpen('6')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">Ponder, 2022</p>
 						<p class="catalog-item-artist">Harshal Duddalwar</p>
+						<p class="catalog-item-name"><em>Ponder</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="7" onclick="projectOpen('7')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">Sugar Glass, 2022</p>
 						<p class="catalog-item-artist">Jan Alec Figuracion</p>
+						<p class="catalog-item-name"><em>Sugar Glass</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="installation">
-					<img src="assets/ui/glyph-installation.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="installation" data-id="8" onclick="projectOpen('8')">
+					<div class="catalog-item-img" data-glyph="installation"></div>
 					<div>
-						<p class="catalog-item-name">ASCII Fridge, Hello World!, 2022</p>
 						<p class="catalog-item-artist">Lian Fumerton-Liu & Joey Petrillo</p>
+						<p class="catalog-item-name"><em>ASCII Fridge</em>, Hello World!, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="9" onclick="projectOpen('9')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">Untitled (In the beginning...), 2022</p>
 						<p class="catalog-item-artist">Dougal Henken</p>
+						<p class="catalog-item-name"><em>Untitled (In the beginning...)</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="10" onclick="projectOpen('10')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">Emergence, Fractal, Lexicon, 2022</p>
 						<p class="catalog-item-artist">Serena Ho</p>
+						<p class="catalog-item-name"><em>Emergence, Fractal, Lexicon</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="11" onclick="projectOpen('11')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">Between, 2022</p>
 						<p class="catalog-item-artist">Ian Keliher</p>
+						<p class="catalog-item-name"><em>Between</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="12" onclick="projectOpen('12')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">In A Field, 2022</p>
 						<p class="catalog-item-artist">Kaela Kennedy</p>
+						<p class="catalog-item-name"><em>In A Field</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="web">
-					<img src="assets/ui/glyph-web.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="web" data-id="13" onclick="projectOpen('13')">
+					<div class="catalog-item-img" data-glyph="web"></div>
 					<div>
-						<p class="catalog-item-name">ALT Barrier 2022: Voice-Over-Text, 2022</p>
 						<p class="catalog-item-artist">Dohee Kim</p>
+						<p class="catalog-item-name"><em>ALT Barrier 2022: Voice-Over-Text</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="14" onclick="projectOpen('14')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">Three Stripes, 2022</p>
 						<p class="catalog-item-artist">Karan Kumar</p>
+						<p class="catalog-item-name"><em>Three Stripes</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="web">
-					<img src="assets/ui/glyph-web.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="web" data-id="15" onclick="projectOpen('15')">
+					<div class="catalog-item-img" data-glyph="web"></div>
 					<div>
-						<p class="catalog-item-name">Frozen Island, 2022</p>
 						<p class="catalog-item-artist">Halim Lee</p>
+						<p class="catalog-item-name"><em>Frozen Island</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="16" onclick="projectOpen('16')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">#bfff00, 2023</p>
 						<p class="catalog-item-artist">Soo Min Lee</p>
+						<p class="catalog-item-name"><em>#bfff00</em>, 2023</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="17" onclick="projectOpen('17')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">Swish Swoosh, 2023</p>
 						<p class="catalog-item-artist">Sun Ho Lee</p>
+						<p class="catalog-item-name"><em>Swish Swoosh</em>, 2023</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="textile">
-					<img src="assets/ui/glyph-textile.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="textile" data-id="18" onclick="projectOpen('18')">
+					<div class="catalog-item-img" data-glyph="textile"></div>
 					<div>
-						<p class="catalog-item-name">The Space of Memory, 2022</p>
 						<p class="catalog-item-artist">Jenni Oughton</p>
+						<p class="catalog-item-name"><em>The Space of Memory</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="19" onclick="projectOpen('19')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">Every Rose has its Thorns, 2021</p>
 						<p class="catalog-item-artist">Joey Petrillo</p>
+						<p class="catalog-item-name"><em>Every Rose has its Thorns</em>, 2021</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="20" onclick="projectOpen('20')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">a-story-in.parts, 2022</p>
 						<p class="catalog-item-artist">Zoë Pulley</p>
+						<p class="catalog-item-name"><em>a-story-in.parts</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="21" onclick="projectOpen('21')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">All the Colors of the Desert, 2022</p>
 						<p class="catalog-item-artist">Sadia Quddus</p>
+						<p class="catalog-item-name"><em>All the Colors of the Desert</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="web">
-					<img src="assets/ui/glyph-web.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="web" data-id="22" onclick="projectOpen('22')">
+					<div class="catalog-item-img" data-glyph="web"></div>
 					<div>
-						<p class="catalog-item-name">Inbox Interpreter</p>
 						<p class="catalog-item-artist">Zach Scheinfeld</p>
+						<p class="catalog-item-name"><em>Inbox Interpreter</em></p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="23" onclick="projectOpen('23')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">A Tale of Lost Items</p>
 						<p class="catalog-item-artist">Ingrid Schmaedecke</p>
+						<p class="catalog-item-name"><em>A Tale of Lost Items</em></p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="24" onclick="projectOpen('24')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">When does a project start?</p>
 						<p class="catalog-item-artist">Ingrid Schmaedecke</p>
+						<p class="catalog-item-name"><em>When does a project start?</em></p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="installation">
-					<img src="assets/ui/glyph-installation.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="installation" data-id="25" onclick="projectOpen('25')">
+					<div class="catalog-item-img" data-glyph="installation"></div>
 					<div>
-						<p class="catalog-item-name">New oil</p>
 						<p class="catalog-item-artist">Glikeriya Shotanova</p>
+						<p class="catalog-item-name"><em>New oil</em></p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="print">
-					<img src="assets/ui/glyph-print.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="print" data-id="26" onclick="projectOpen('26')">
+					<div class="catalog-item-img" data-glyph="print"></div>
 					<div>
-						<p class="catalog-item-name">River Logic</p>
 						<p class="catalog-item-artist">Jack Tufts</p>
+						<p class="catalog-item-name"><em>River Logic</em></p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="27" onclick="projectOpen('27')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">On Noise, 2023</p>
 						<p class="catalog-item-artist">Clinton Van Arnam</p>
+						<p class="catalog-item-name"><em>On Noise</em>, 2023</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="installation">
-					<img src="assets/ui/glyph-installation.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="installation" data-id="28" onclick="projectOpen('28')">
+					<div class="catalog-item-img" data-glyph="installation"></div>
 					<div>
-						<p class="catalog-item-name">Speak the Unspeakable, 2022</p>
 						<p class="catalog-item-artist">Shiyue Wang</p>
+						<p class="catalog-item-name"><em>Speak the Unspeakable</em>, 2022</p>
 					</div>
 				</div>
-				<div class="catalog-item" data-category="video">
-					<img src="assets/ui/glyph-video.svg" class="catalog-item-img">
+				<div class="catalog-item" data-category="video" data-id="29" onclick="projectOpen('29')">
+					<div class="catalog-item-img" data-glyph="video"></div>
 					<div>
-						<p class="catalog-item-name">Mechanick Exercises, 2022</p>
 						<p class="catalog-item-artist">Rebecca Wilkinson</p>
+						<p class="catalog-item-name"><em>Mechanick Exercises</em>, 2022</p>
 					</div>
 				</div>
 			</div>
 	
-			<div class="controls">
+			<div class="controls" id="desktop-controls">
 				<button id="controls-up" onclick="move('up')">
 					<svg viewBox="0 0 276.9 119"><path d="M205.8,46.9c4,0,4.7-5.7,0.8-6.7c-16.5-4.1-31.5-8.7-41.3-13.4c-10.9-5.3-13.4-10-13.4-15.6 c0-6.4,4.2-11.2,11.7-11.2c5.3,0,8.4,2.2,16.2,7.8c33.5,24.6,59.2,39.1,88.8,39.1l0,0c4.6,0,8.4,3.7,8.4,8.4v8.4 c0,4.6-3.7,8.4-8.4,8.4h0c-29.6,0-55.3,14.5-88.8,39.1c-7.8,5.6-10.9,7.8-16.2,7.8c-7.5,0-11.7-4.7-11.7-11.2 c0-5.6,2.2-10.1,13.4-15.6c10.2-4.8,25.6-9.3,42.4-13.4c3.9-1,3.2-6.7-0.8-6.7l-196,10.6C5,83.1,0,78.4,0,72.4l0-25.9 c0-5.9,5-10.6,10.9-10.3L205.8,46.9z"/></svg>
 				</button>
@@ -274,6 +279,42 @@
 		<div class="map-container">
 			<div class="map" style="top:0;left:0;">
 			</div>
+		</div>
+
+		<div class="project-container">
+			<div class="project-content">
+				<div class="project-content-close" onclick="projectClose()">
+					<svg viewBox="0 0 24 24"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg>
+				</div>
+				<div class="project-content-img"></div>
+				<div class="project-content-info">
+					<div class="project-content-credits">
+						<p class="project-content-artist"></p>
+						<p class="project-content-title"></p>
+					</div>
+					<p class="project-content-description"></p>
+				</div>
+			</div>
+			<div class="project-shadow" onclick="projectClose()"></div>
+		</div>
+
+		<div class="mobile-hamburger" onclick="openSidebar()" data-active="0">
+			<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+		</div>
+
+		<div class="controls" id="mobile-controls">
+			<button id="controls-up" onclick="move('up')">
+				<svg viewBox="0 0 276.9 119"><path d="M205.8,46.9c4,0,4.7-5.7,0.8-6.7c-16.5-4.1-31.5-8.7-41.3-13.4c-10.9-5.3-13.4-10-13.4-15.6 c0-6.4,4.2-11.2,11.7-11.2c5.3,0,8.4,2.2,16.2,7.8c33.5,24.6,59.2,39.1,88.8,39.1l0,0c4.6,0,8.4,3.7,8.4,8.4v8.4 c0,4.6-3.7,8.4-8.4,8.4h0c-29.6,0-55.3,14.5-88.8,39.1c-7.8,5.6-10.9,7.8-16.2,7.8c-7.5,0-11.7-4.7-11.7-11.2 c0-5.6,2.2-10.1,13.4-15.6c10.2-4.8,25.6-9.3,42.4-13.4c3.9-1,3.2-6.7-0.8-6.7l-196,10.6C5,83.1,0,78.4,0,72.4l0-25.9 c0-5.9,5-10.6,10.9-10.3L205.8,46.9z"/></svg>
+			</button>
+			<button id="controls-down" onclick="move('down')">
+				<svg viewBox="0 0 276.9 119"><path d="M205.8,46.9c4,0,4.7-5.7,0.8-6.7c-16.5-4.1-31.5-8.7-41.3-13.4c-10.9-5.3-13.4-10-13.4-15.6 c0-6.4,4.2-11.2,11.7-11.2c5.3,0,8.4,2.2,16.2,7.8c33.5,24.6,59.2,39.1,88.8,39.1l0,0c4.6,0,8.4,3.7,8.4,8.4v8.4 c0,4.6-3.7,8.4-8.4,8.4h0c-29.6,0-55.3,14.5-88.8,39.1c-7.8,5.6-10.9,7.8-16.2,7.8c-7.5,0-11.7-4.7-11.7-11.2 c0-5.6,2.2-10.1,13.4-15.6c10.2-4.8,25.6-9.3,42.4-13.4c3.9-1,3.2-6.7-0.8-6.7l-196,10.6C5,83.1,0,78.4,0,72.4l0-25.9 c0-5.9,5-10.6,10.9-10.3L205.8,46.9z"/></svg>
+			</button>
+			<button id="controls-left" onclick="move('left')">
+				<svg viewBox="0 0 276.9 119"><path d="M205.8,46.9c4,0,4.7-5.7,0.8-6.7c-16.5-4.1-31.5-8.7-41.3-13.4c-10.9-5.3-13.4-10-13.4-15.6 c0-6.4,4.2-11.2,11.7-11.2c5.3,0,8.4,2.2,16.2,7.8c33.5,24.6,59.2,39.1,88.8,39.1l0,0c4.6,0,8.4,3.7,8.4,8.4v8.4 c0,4.6-3.7,8.4-8.4,8.4h0c-29.6,0-55.3,14.5-88.8,39.1c-7.8,5.6-10.9,7.8-16.2,7.8c-7.5,0-11.7-4.7-11.7-11.2 c0-5.6,2.2-10.1,13.4-15.6c10.2-4.8,25.6-9.3,42.4-13.4c3.9-1,3.2-6.7-0.8-6.7l-196,10.6C5,83.1,0,78.4,0,72.4l0-25.9 c0-5.9,5-10.6,10.9-10.3L205.8,46.9z"/></svg>
+			</button>
+			<button id="controls-right" onclick="move('right')">
+				<svg viewBox="0 0 276.9 119"><path d="M205.8,46.9c4,0,4.7-5.7,0.8-6.7c-16.5-4.1-31.5-8.7-41.3-13.4c-10.9-5.3-13.4-10-13.4-15.6 c0-6.4,4.2-11.2,11.7-11.2c5.3,0,8.4,2.2,16.2,7.8c33.5,24.6,59.2,39.1,88.8,39.1l0,0c4.6,0,8.4,3.7,8.4,8.4v8.4 c0,4.6-3.7,8.4-8.4,8.4h0c-29.6,0-55.3,14.5-88.8,39.1c-7.8,5.6-10.9,7.8-16.2,7.8c-7.5,0-11.7-4.7-11.7-11.2 c0-5.6,2.2-10.1,13.4-15.6c10.2-4.8,25.6-9.3,42.4-13.4c3.9-1,3.2-6.7-0.8-6.7l-196,10.6C5,83.1,0,78.4,0,72.4l0-25.9 c0-5.9,5-10.6,10.9-10.3L205.8,46.9z"/></svg>
+			</button>
 		</div>
 	</main>
 	<script src="script.js"></script>

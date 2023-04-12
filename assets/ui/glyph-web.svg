@@ -1,21 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.49 282.49">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #00eb00;
-      }
-
-      .cls-2 {
-        fill: none;
-        opacity: 0;
-      }
-    </style>
-  </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
-    <g>
-      <rect class="cls-2" width="282.49" height="282.49"/>
-      <path class="cls-1" d="m204.11,12.27c-38.46,0-63.45,23.75-65.24,61.66h-.04c-39.58,0-64.89,25.15-65.34,65.01-37.11,2.01-60.47,27.13-60.47,65.94s25.41,65.35,65.35,65.35,64.89-25.15,65.34-65.01c35.68-1.94,58.65-25.24,60.36-61.53.01,0,.03,0,.04,0,39.93,0,65.35-25.59,65.35-66.07S244.05,12.27,204.11,12.27Z"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2_00000133516097561375658730000010731999044976178072_"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 282.5 282.5"
+	 style="enable-background:new 0 0 282.5 282.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FAFAFA;}
+</style>
+<g id="Layer_1-2">
+	<g>
+		<path class="st0" d="M204.1,12.3c-38.5,0-63.4,23.8-65.2,61.7h0c-39.6,0-64.9,25.2-65.3,65c-37.1,2-60.5,27.1-60.5,65.9
+			s25.4,65.4,65.3,65.4s64.9-25.1,65.3-65c35.7-1.9,58.6-25.2,60.4-61.5c0,0,0,0,0,0c39.9,0,65.4-25.6,65.4-66.1
+			S244.1,12.3,204.1,12.3z"/>
+	</g>
+</g>
 </svg>
