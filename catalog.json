@@ -1,27 +1,33 @@
 {
   "0": {
     "id": "0",
-    "pos": "[19,18]",
+    "pos": "[14,18]",
     "artist": "Husna Abubakar",
     "category": "textile",
     "piece": "<em>Kanga #2</em>, 2022",
-    "desc": "Fabric Print on Belgian Linen"
+    "desc": "Fabric Print on Belgian Linen",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "1": {
     "id": "1",
-    "pos": "[15,11]",
+    "pos": "[10,18]",
     "artist": "Michelle Belgrod",
     "category": "installation",
     "piece": "Psychic Slice, 2022",
-    "desc": "Psychic Slice began as an exercise in drawing connections between the commercial worlds of fortune telling and pizza. The concept brand merges visual and verbal vernacular from the two to create a system that’s equally cheesy, equally divine. The copy on the box walks diners through the mystical process of reading their fortunes in the pizza grease."
+    "desc": "Psychic Slice began as an exercise in drawing connections between the commercial worlds of fortune telling and pizza. The concept brand merges visual and verbal vernacular from the two to create a system that’s equally cheesy, equally divine. The copy on the box walks diners through the mystical process of reading their fortunes in the pizza grease.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "2": {
     "id": "2",
-    "pos": "[3,7]",
+    "pos": "[3,13]",
     "artist": "Kate Brown",
     "category": "print",
-    "piece": "Composition generator, 2022",
-    "desc": "This is the abandoned plan for a text and image project. Printed as a two-sided diptych—white on black and black on white—it sits between art and graphic design. Made using principles of graphic design (a grid, gutters, folds), the result is geometric abstraction."
+    "piece": "Composition Generator, 2022",
+    "desc": "This is the abandoned plan for a text and image project. Printed as a two-sided diptych—white on black and black on white—it sits between art and graphic design. Made using principles of graphic design (a grid, gutters, folds), the result is geometric abstraction.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "3": {
     "id": "3",
@@ -29,7 +35,9 @@
     "artist": "Lydia Chodosh",
     "category": "web",
     "piece": "Spore Site, 2022",
-    "desc": "Spore Site began germinating in the Fall of 2022. Inspired by a close examination of the categorical systems common to library catalogs and encounters with literature on mycelial networks, I endeavored to build a site of reference points that visitors could navigate intuitively, without the standard limitations of prescribed labels. The site contains a series of over 80 recorded stories, cataloging in each contributor's experience with a moment of connection."
+    "desc": "Spore Site began germinating in the Fall of 2022. Inspired by a close examination of the categorical systems common to library catalogs and encounters with literature on mycelial networks, I endeavored to build a site of reference points that visitors could navigate intuitively, without the standard limitations of prescribed labels. The site contains a series of over 80 recorded stories, cataloging in each contributor's experience with a moment of connection.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "4": {
     "id": "4",
@@ -37,23 +45,29 @@
     "artist": "Ben Denzer",
     "category": "textile",
     "piece": "Two Hundred Eighty-Nine Dollar Quilt, 2022.",
-    "desc": "A quilt made with two hundred eighty-nine dollars."
+    "desc": "A quilt made with two hundred eighty-nine dollars.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "5": {
     "id": "5",
-    "pos": "[28,11]",
+    "pos": "[29,11]",
     "artist": "Gabriel Drozdov",
     "category": "web",
     "piece": "Pixel Weaver, 2022",
-    "desc": "Pixel Weaver is a generative art toy that creates animated digital textiles based on source images. Try it out at <a href='http://gabrieldrozdov.github.io/pixel-weaver/' target='_blank'>gabrieldrozdov.github.io/pixel-weaver/</a>."
+    "desc": "Pixel Weaver is a generative art toy that creates animated digital textiles based on source images. Try it out at <a href='http://gabrieldrozdov.github.io/pixel-weaver/' target='_blank'>gabrieldrozdov.github.io/pixel-weaver/</a>.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "6": {
     "id": "6",
-    "pos": "[4,12]",
+    "pos": "[2,11]",
     "artist": "Harshal Duddalwar",
     "category": "print",
     "piece": "Ponder, 2022",
-    "desc": "“Ponder” is a self-portrait installation composed of fragmented narratives drawn from my diary entries spanning a year. Each narrative is distilled into a few keywords and inscribed on calling cards, which are then interwoven to create a larger narrative that delves into and examines my identity and its influence on my professional work. The installation comprises two types of cards: single-sided cards that contain musings on my daily routine, and double-sided cards that feature questions on one side and counter-questions, answers, or affirmations on the other."
+    "desc": "“Ponder” is a self-portrait installation composed of fragmented narratives drawn from my diary entries spanning a year. Each narrative is distilled into a few keywords and inscribed on calling cards, which are then interwoven to create a larger narrative that delves into and examines my identity and its influence on my professional work. The installation comprises two types of cards: single-sided cards that contain musings on my daily routine, and double-sided cards that feature questions on one side and counter-questions, answers, or affirmations on the other.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "7": {
     "id": "7",
@@ -61,7 +75,9 @@
     "artist": "Jan Alec Figuracion",
     "category": "video",
     "piece": "Sugar Glass, 2022",
-    "desc": "Presented in split-screen, this short, intimate profile about my grandmother is an attempt to tug and shape a fragment of her story and shards of her memory through two perspectives—my own and my father's. Using old photographs, archival clips, and my own footage, Sugar Glass explores the many myths, lores, and legends my grandmother used to tell me when I was young, and at times storytelling in and of itself. By utilizing the narrative, structural and graphic possibilities of the split-screen format, the story presented in this film is shaped, expanded, and complicated by way of associative editing and formal visual rhyming. With tenderness and longing, I hope to present not just a portrait of my grandmother, but also our own memories and stories—remembered, reconstructed, and retold."
+    "desc": "Presented in split-screen, this short, intimate profile about my grandmother is an attempt to tug and shape a fragment of her story and shards of her memory through two perspectives—my own and my father's. Using old photographs, archival clips, and my own footage, Sugar Glass explores the many myths, lores, and legends my grandmother used to tell me when I was young, and at times storytelling in and of itself. By utilizing the narrative, structural and graphic possibilities of the split-screen format, the story presented in this film is shaped, expanded, and complicated by way of associative editing and formal visual rhyming. With tenderness and longing, I hope to present not just a portrait of my grandmother, but also our own memories and stories—remembered, reconstructed, and retold.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "8": {
     "id": "8",
@@ -69,7 +85,9 @@
     "artist": "Lian Fumerton-Liu & Joey Petrillo",
     "category": "installation",
     "piece": "ASCII Fridge, Hello World!, 2022",
-    "desc": "Welcome to our ecosystem for slowing down; a collaborative series of experiments hosted by us, Lian and Joey (ᵔ◡ᵔ✿)(ᵔ◡ᵔ★). We are thinking of these gestures and conversations as akin (and often literally) to taking a long, meandering walk. “We want to ask, can a moment of joy be radical?” And, when is it done? Why does it have to be?"
+    "desc": "Welcome to our ecosystem for slowing down; a collaborative series of experiments hosted by us, Lian and Joey (ᵔ◡ᵔ✿)(ᵔ◡ᵔ★). We are thinking of these gestures and conversations as akin (and often literally) to taking a long, meandering walk. “We want to ask, can a moment of joy be radical?” And, when is it done? Why does it have to be?",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "9": {
     "id": "9",
@@ -77,15 +95,19 @@
     "artist": "Dougal Henken",
     "category": "print",
     "piece": "Untitled (In the beginning...), 2022",
-    "desc": "A large format print that layers theleogical references to \"The Word\" from the Book of John with a grid scale measuring reward and punishement, all challenging scale and readability."
+    "desc": "A large format print that layers theleogical references to \"The Word\" from the Book of John with a grid scale measuring reward and punishement, all challenging scale and readability.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "10": {
     "id": "10",
-    "pos": "[10,18]",
+    "pos": "[29,18]",
     "artist": "Serena Ho",
     "category": "print",
     "piece": "Emergence, Fractal, Lexicon, 2022",
-    "desc": "Each poster in this triptych illustrates a facet of my practice: emergence, fractal, and lexicon. The posters were created using modular units I designed which were tiled in the software program Processing."
+    "desc": "Each poster in this triptych illustrates a facet of my practice: emergence, fractal, and lexicon. The posters were created using modular units I designed which were tiled in the software program Processing.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "11": {
     "id": "11",
@@ -93,79 +115,99 @@
     "artist": "Ian Keliher",
     "category": "video",
     "piece": "Between, 2022",
-    "desc": "Between is a split-screen video comprised of interviews with Dougal Henken (GD MFA '23) and Sun Ho Lee (GD MFA '23) on the question of “what is communication?” along with an excerpt of “What is Man?” (1938) by Martin Buber."
+    "desc": "Between is a split-screen video comprised of interviews with Dougal Henken (GD MFA '23) and Sun Ho Lee (GD MFA '23) on the question of “what is communication?” along with an excerpt of “What is Man?” (1938) by Martin Buber.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "12": {
     "id": "12",
-    "pos": "[31,18]",
+    "pos": "[5,16]",
     "artist": "Kaela Kennedy",
     "category": "textile",
     "piece": "In A Field, 2022",
-    "desc": "This piece, somewhere in between textile and sculpture, imagines the text of Mark Strand’s famous poem In A Field as a formal output. Digitally embroidered gauze serves as a semi-present substrate for Strand’s words, evoking a sense of impermanence and “moving through.”"
+    "desc": "This piece, somewhere in between textile and sculpture, imagines the text of Mark Strand’s famous poem In A Field as a formal output. Digitally embroidered gauze serves as a semi-present substrate for Strand’s words, evoking a sense of impermanence and “moving through.”",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "13": {
     "id": "13",
-    "pos": "[34,11]",
+    "pos": "[33,11]",
     "artist": "Dohee Kim",
     "category": "web",
     "piece": "ALT Barrier 2022: Voice-Over-Text, 2022",
-    "desc": "The project has the following sequence of ALT Barrier 2021: Voice-Over-Text. ALT Barrier 2021 began with the question of whether computer vision would be able to fully interpret the message. The barriers built by comparing original images, messages, and texts interpreted by technology represent the lethargy experienced in the process of datafication of messages in our society. The difference between interpretation by automatic alt text and human perspective makes us witness the process of ignoring essential messages.  However, considering that artificial intelligence eventually is eventually an artifact learned by humans and there is no perfect image description in the world, it seems difficult to find a reason to confront technology and humans. Instead, the Alt barrier 2022 recognizes the interpretation of technology as part of the complex perspective that exists today, rather than dismissing it as a technological error. By adding another layer using iPhone's 'live text’, The project expands the possibility of various interpretations in images."
+    "desc": "The project has the following sequence of ALT Barrier 2021: Voice-Over-Text. ALT Barrier 2021 began with the question of whether computer vision would be able to fully interpret the message. The barriers built by comparing original images, messages, and texts interpreted by technology represent the lethargy experienced in the process of datafication of messages in our society. The difference between interpretation by automatic alt text and human perspective makes us witness the process of ignoring essential messages.  However, considering that artificial intelligence eventually is eventually an artifact learned by humans and there is no perfect image description in the world, it seems difficult to find a reason to confront technology and humans. Instead, the Alt barrier 2022 recognizes the interpretation of technology as part of the complex perspective that exists today, rather than dismissing it as a technological error. By adding another layer using iPhone's 'live text’, The project expands the possibility of various interpretations in images.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "14": {
     "id": "14",
-    "pos": "[7,16]",
+    "pos": "[12,16]",
     "artist": "Karan Kumar",
     "category": "print",
     "piece": "Three Stripes, 2022",
-    "desc": "The three stripes are well-known to be associated with a popular brand in the fashion industry, recognized for their unique designs and high-quality products. However, the brand has been under fire for its misuse of power in the industry. As part of a project examining the impact of the street fashion industry on workers and the environment, this publication highlights moments in the brand's history, including its rise to prominence and its role in perpetuating systemic issues."
+    "desc": "The three stripes are well-known to be associated with a popular brand in the fashion industry, recognized for their unique designs and high-quality products. However, the brand has been under fire for its misuse of power in the industry. As part of a project examining the impact of the street fashion industry on workers and the environment, this publication highlights moments in the brand's history, including its rise to prominence and its role in perpetuating systemic issues.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "15": {
     "id": "15",
-    "pos": "[26,11]",
+    "pos": "[28,11]",
     "artist": "Halim Lee",
     "category": "web",
     "piece": "Frozen Island, 2022",
-    "desc": "“Frozen Island” is an archive of frozen time on Google Maps. Selected captured moments are marked on the map, and viewers are invited to explore the island by dropping their Google Maps avatars on the island. This project is coded as a website but also translated into physical forms: 35mm film slides and print media. The publication, “Frozen Island. Live,” includes a set of postage stamps as a gift from Frozen Island. Each stamp is a mini-portal that includes an NFC tag. Viewers can travel to the place shown on the stamp by tagging it with their smartphone."
+    "desc": "“Frozen Island” is an archive of frozen time on Google Maps. Selected captured moments are marked on the map, and viewers are invited to explore the island by dropping their Google Maps avatars on the island. This project is coded as a website but also translated into physical forms: 35mm film slides and print media. The publication, “Frozen Island. Live,” includes a set of postage stamps as a gift from Frozen Island. Each stamp is a mini-portal that includes an NFC tag. Viewers can travel to the place shown on the stamp by tagging it with their smartphone.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "16": {
     "id": "16",
-    "pos": "[29,18]",
+    "pos": "[12,11]",
     "artist": "Soo Min Lee",
     "category": "textile",
     "piece": "#bfff00, 2023",
-    "desc": "#bfff00 is a woven rug that represents the reversed process of digitalized graphic pattern into traditional slow hand weaving techniques. The labor of weaving questions the modern graphic design process."
+    "desc": "#bfff00 is a woven rug that represents the reversed process of digitalized graphic pattern into traditional slow hand weaving techniques. The labor of weaving questions the modern graphic design process.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "17": {
     "id": "17",
-    "pos": "[22,18]",
+    "pos": "[18,18]",
     "artist": "Sun Ho Lee",
     "category": "textile",
     "piece": "Swish Swoosh, 2023",
-    "desc": "Swish Swoosh is a carrier bag of stories about Asian immigrants and bilingualism. We rapidly switch languages at home and in the outside world. The switch extends beyond just the language; different personality traits, beliefs, and levels of responsibilities are associated with each language we speak.<br><br>The project takes two forms: the knit and the book. The knit embodies how Asian immigrants weave in values and habits from their homes and the dominant ones in society that are heard more. The book delves into more personal stories: some took on the responsibility of an adult as a kid, translating at their grandpa’s doctor’s appointment. Some erased the pidgin accents they picked up in different countries. Some would pick up the phone in English at school even if it were from their family. Altogether, the stories create a glossary of the under-documented experiences of Asian immigrants."
+    "desc": "Swish Swoosh is a carrier bag of stories about Asian immigrants and bilingualism. We rapidly switch languages at home and in the outside world. The switch extends beyond just the language; different personality traits, beliefs, and levels of responsibilities are associated with each language we speak.<br><br>The project takes two forms: the knit and the book. The knit embodies how Asian immigrants weave in values and habits from their homes and the dominant ones in society that are heard more. The book delves into more personal stories: some took on the responsibility of an adult as a kid, translating at their grandpa’s doctor’s appointment. Some erased the pidgin accents they picked up in different countries. Some would pick up the phone in English at school even if it were from their family. Altogether, the stories create a glossary of the under-documented experiences of Asian immigrants.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "18": {
     "id": "18",
-    "pos": "[26,18]",
+    "pos": "[22,18]",
     "artist": "Jenni Oughton",
     "category": "textile",
     "piece": "The Space of Memory, 2022",
-    "desc": "If only we could admit memory is fallible and consciously rewrite it, would that provide space for a kinder relationship with one's past?<br><br>The Space of Memory was an exploration of the space between memory and reality. It mixes embroidered photos, beading, glitched tapestries, and melted embroideries created on water soluble materials. While on the surface, it asks people to recall the fragments of things they can no longer firmly  remember, it also explores the relationship between transness and memory. What is our relationship to memories when others see and remember us so differently from how we understand ourselves? And what is the value of consciously rewriting a memory? Memories slip and our subconscious changes them, making them into stories with their own lives. So what is to stop us from invading the space of memory to remember a version of you that feels more honest?"
+    "desc": "If only we could admit memory is fallible and consciously rewrite it, would that provide space for a kinder relationship with one's past?<br><br>The Space of Memory was an exploration of the space between memory and reality. It mixes embroidered photos, beading, glitched tapestries, and melted embroideries created on water soluble materials. While on the surface, it asks people to recall the fragments of things they can no longer firmly  remember, it also explores the relationship between transness and memory. What is our relationship to memories when others see and remember us so differently from how we understand ourselves? And what is the value of consciously rewriting a memory? Memories slip and our subconscious changes them, making them into stories with their own lives. So what is to stop us from invading the space of memory to remember a version of you that feels more honest?",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "19": {
     "id": "19",
-    "pos": "[11,11]",
+    "pos": "[16,11]",
     "artist": "Joey Petrillo",
     "category": "video",
     "piece": "Every Rose has its Thorns, 2021",
-    "desc": "On a Hot Summer Night would you offer your throat to the Wolf with the Red Roses?"
+    "desc": "On a Hot Summer Night would you offer your throat to the Wolf with the Red Roses?",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "20": {
     "id": "20",
-    "pos": "[18,14]",
+    "pos": "[31,11]",
     "artist": "Zoë Pulley",
-    "category": "print",
+    "category": "web",
     "piece": "a-story-in.parts, 2022",
-    "desc": "a-story-in.parts is a digital and spatial narrative experience by way of a video series, website and photo album that utilizes physical computing to navigate within the browser."
+    "desc": "a-story-in.parts is a digital and spatial narrative experience by way of a video series, website and photo album that utilizes physical computing to navigate within the browser.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "21": {
     "id": "21",
@@ -173,7 +215,9 @@
     "artist": "Sadia Quddus",
     "category": "video",
     "piece": "All the Colors of the Desert, 2022",
-    "desc": "This three part video essay documents my connection to the desert through the lens of my faith, gender, race, and soul. I took video footage from my road trip through West Texas, and resequenced them with narrative to create an otherworldly atmosphere somewhere between dream and reality. The jerky, stop-motion quality of the video expresses the discordant, disorienting relationship between soul and body that my narrative gives voice to."
+    "desc": "This three part video essay documents my connection to the desert through the lens of my faith, gender, race, and soul. I took video footage from my road trip through West Texas, and resequenced them with narrative to create an otherworldly atmosphere somewhere between dream and reality. The jerky, stop-motion quality of the video expresses the discordant, disorienting relationship between soul and body that my narrative gives voice to.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "22": {
     "id": "22",
@@ -181,31 +225,39 @@
     "artist": "Zach Scheinfeld",
     "category": "web",
     "piece": "Inbox Interpreter",
-    "desc": "Inbox interpreter is a network of websites that re-designs the interface of a typical email inbox. The system takes content that is usually anxiety inducing, and transforms it into a whimsical interface consisting of five websites spanning across ten monitors. Each phase of the network highlights a fragment of my inbox, and produces an animation or click interaction that recontextualizes the email’s language. The work was installed as a physical installation in the form of a circle, giving users the opportunity to take a slow walk around my email."
+    "desc": "Inbox interpreter is a network of websites that re-designs the interface of a typical email inbox. The system takes content that is usually anxiety inducing, and transforms it into a whimsical interface consisting of five websites spanning across ten monitors. Each phase of the network highlights a fragment of my inbox, and produces an animation or click interaction that recontextualizes the email’s language. The work was installed as a physical installation in the form of a circle, giving users the opportunity to take a slow walk around my email.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "23": {
     "id": "23",
-    "pos": "[6,13]",
+    "pos": "[14,13]",
     "artist": "Ingrid Schmaedecke",
     "category": "print",
     "piece": "A Tale of Lost Items",
-    "desc": "Museums are bureaucratical institutions by necessity. The meticulous work that is required to keep a museum running is enormous — so how come an item in the collection gets lost? This is, perhaps, a non-catalog, for a non-exhibit, for objects that we can only know through documents, images, and/or descriptions, traces of their metadata."
+    "desc": "Museums are bureaucratical institutions by necessity. The meticulous work that is required to keep a museum running is enormous — so how come an item in the collection gets lost? This is, perhaps, a non-catalog, for a non-exhibit, for objects that we can only know through documents, images, and/or descriptions, traces of their metadata.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "24": {
     "id": "24",
-    "pos": "[21,15]",
+    "pos": "[21,16]",
     "artist": "Ingrid Schmaedecke",
     "category": "print",
     "piece": "When does a project start?",
-    "desc": "I’m interested in understanding my own creative process as a designer, and how that’s changed from how I worked prior to grad school, and prior to graphic design. I learn a lot by going to people’s desks around the studio and asking them how do you do this? or how did you think of that? The habit of reaching out to others prompted me to address my cohort (and some other people I’ve had the luck to come across during my time at RISD) about their creative processes. I've compiled what I heard in this book."
+    "desc": "I’m interested in understanding my own creative process as a designer, and how that’s changed from how I worked prior to grad school, and prior to graphic design. I learn a lot by going to people’s desks around the studio and asking them how do you do this? or how did you think of that? The habit of reaching out to others prompted me to address my cohort (and some other people I’ve had the luck to come across during my time at RISD) about their creative processes. I've compiled what I heard in this book.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "25": {
     "id": "25",
-    "pos": "[4,15]",
+    "pos": "[3,15]",
     "artist": "Glikeriya Shotanova",
     "category": "installation",
-    "piece": "New oil",
-    "desc": "In March 2023, I challenged myself to create a series of mini-sculptures as a daily practice. Each sculpture is accompanied by a unique backstory, representing different individuals who play a role in our modern society. They will be displayed as products to be sold in the capitalist system that governs our world.\nIn the age of technology, people are the new oil. Through these sculptures, I hope to shed light on the diverse and complex individuals who make up our society and the impact they have on our world."
+    "piece": "New Oil",
+    "desc": "In March 2023, I challenged myself to create a series of mini-sculptures as a daily practice. Each sculpture is accompanied by a unique backstory, representing different individuals who play a role in our modern society. They will be displayed as products to be sold in the capitalist system that governs our world.\nIn the age of technology, people are the new oil. Through these sculptures, I hope to shed light on the diverse and complex individuals who make up our society and the impact they have on our world.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "26": {
     "id": "26",
@@ -213,23 +265,29 @@
     "artist": "Jack Tufts",
     "category": "print",
     "piece": "River Logic",
-    "desc": "A book that is the river. River Logic documents the final 150 miles of the roughly 2,350 miles of the Mississippi River, from just above New Orleans to the Gulf of Mexico. The book folds to the bends of the river, allowing the viewer to flow along the pages. The accordion-style book fully unfolded is measured at 160 ft — the saying goes that Louisiana is losing as much as a football field of its coast every hour due to sea level rise, increasing storms and subsidence, and reduced sediment flow because of an over-controlled river — the end zone of a football field is measured at 160 ft. And like the logic of a river, this book begins and arrives, and we follow to see where it will take us."
+    "desc": "A book that is the river. River Logic documents the final 150 miles of the roughly 2,350 miles of the Mississippi River, from just above New Orleans to the Gulf of Mexico. The book folds to the bends of the river, allowing the viewer to flow along the pages. The accordion-style book fully unfolded is measured at 160 ft — the saying goes that Louisiana is losing as much as a football field of its coast every hour due to sea level rise, increasing storms and subsidence, and reduced sediment flow because of an over-controlled river — the end zone of a football field is measured at 160 ft. And like the logic of a river, this book begins and arrives, and we follow to see where it will take us.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "27": {
     "id": "27",
-    "pos": "[23,11]",
+    "pos": "[24,11]",
     "artist": "Clinton Van Arnam",
     "category": "video",
     "piece": "On Noise, 2023",
-    "desc": "Video essay on noise, politics and reproduction of mass music"
+    "desc": "Video essay on noise, politics and reproduction of mass music",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "28": {
     "id": "28",
-    "pos": "[14,18]",
+    "pos": "[8,12]",
     "artist": "Shiyue Wang",
     "category": "installation",
     "piece": "Speak the Unspeakable, 2022",
-    "desc": "Clay is a stable medium for storing information and can preserve data for thousands of years, such as cuneiform. However, determining what information is worth archiving is a question that arises. China's authoritarian regime censors sensitive or dissenting content posted by people, prompting the archiving of unspeakable discussions and topics on Chinese social media. “SPEAK the UNSPEAKABLE” showcases the struggle between Chinese digital citizens and government censorship, with various ways developed to bypass censorship and discuss taboo topics. By scanning QR codes on clay tablets, you can explore China's digital social life and receive a guidebook on seven ways to bypass censorship."
+    "desc": "Clay is a stable medium for storing information and can preserve data for thousands of years, such as cuneiform. However, determining what information is worth archiving is a question that arises. China's authoritarian regime censors sensitive or dissenting content posted by people, prompting the archiving of unspeakable discussions and topics on Chinese social media. “SPEAK the UNSPEAKABLE” showcases the struggle between Chinese digital citizens and government censorship, with various ways developed to bypass censorship and discuss taboo topics. By scanning QR codes on clay tablets, you can explore China's digital social life and receive a guidebook on seven ways to bypass censorship.",
+    "img": "placeholder.svg",
+    "links": ""
   },
   "29": {
     "id": "29",
@@ -237,6 +295,8 @@
     "artist": "Rebecca Wilkinson",
     "category": "video",
     "piece": "Mechanick Exercises, 2022",
-    "desc": "Mechanick Exercises (2022), 3 mins 7 seconds<br><br>Part video essay, part performance, this piece emerged from a close reading of Joseph Moxon’s 1678 book, Mechanick Exercises on The Whole Art of Printing. It explores the ever-changing relationships between the tools of design, technology, labour, and the body. The voiceover combines quotes from Moxon’s text with excerpts from Beatriz Colomina and Mark Wigley’s 2016 book, <em>Are We Human? Notes on an Archaeology of Design.</em><br><br>This piece is accompanied by a supplementary text as well as a set of cards that provide additional research and references on the topic."
+    "desc": "Mechanick Exercises (2022), 3 mins 7 seconds<br><br>Part video essay, part performance, this piece emerged from a close reading of Joseph Moxon’s 1678 book, Mechanick Exercises on The Whole Art of Printing. It explores the ever-changing relationships between the tools of design, technology, labour, and the body. The voiceover combines quotes from Moxon’s text with excerpts from Beatriz Colomina and Mark Wigley’s 2016 book, <em>Are We Human? Notes on an Archaeology of Design.</em><br><br>This piece is accompanied by a supplementary text as well as a set of cards that provide additional research and references on the topic.",
+    "img": "placeholder.svg",
+    "links": ""
   }
 }

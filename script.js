@@ -26,32 +26,37 @@ window.addEventListener('mouseup', () => {
 // ————————————————————————————————————————————————————————————
 // ————————————————————————————————————————————————————————————
 
+let letter = document.querySelector(".letter-container");
+let letterContent = document.querySelector(".letter-content");
+let letterClose = document.querySelector(".letter-close");
 let logo = document.querySelector(".logo");
 let sidebar = document.querySelector(".sidebar");
 let mobileControls = document.querySelector("#mobile-controls");
 let mobileHamburger = document.querySelector(".mobile-hamburger");
 let initialized = false;
 function initialize() {
+	letter.style.pointerEvents = "none";
+	letterContent.style.transform = "translateX(-100%)";
+	letterClose.style.transform = "translateX(100%)";
 	setTimeout(() => {
 		initialized = true;
 		if (window.innerWidth > 800) {
 			sidebar.dataset.active = "1";
 		}
-	}, 2000)
+	}, 3000)
 	setTimeout(() => {
 		mobileControls.dataset.active = "1";
-	}, 2000)
+	}, 3000)
 	setTimeout(() => {
 		logo.dataset.transition = "1";
-	}, 1000)
+	}, 2000)
 	setTimeout(() => {
 		mapContainer.style.transform = "scale(1)";
-	}, 2000)
+	}, 3000)
 	setTimeout(() => {
 		mobileHamburger.dataset.active = "1";
-	}, 2000)
+	}, 3000)
 }
-initialize();
 
 
 
@@ -129,12 +134,11 @@ fetch('catalog.json')
 
 let featuredProject = 0;
 let projectContainer = document.querySelector(".project-container");
-let projectShadow = projectContainer.querySelector(".project-shadow");
-let projectContent = projectContainer.querySelector(".project-content");
-let projectContentImg = projectContent.querySelector(".project-content-img");
-let projectContentArtist = projectContent.querySelector(".project-content-artist");
-let projectContentTitle = projectContent.querySelector(".project-content-title");
-let projectContentDescription = projectContent.querySelector(".project-content-description");
+let projectContentImg = projectContainer.querySelector(".project-content-img");
+let projectContentInfo = projectContainer.querySelector(".project-content-info");
+let projectContentDescription = projectContainer.querySelector(".project-content-description");
+let projectContentLinks = projectContainer.querySelector(".project-content-links");
+let projectContentClose = projectContainer.querySelector(".project-content-close");
 function projectOpen(id) {
 	// Move player to correct location
 	let targetPos = projects[id]['pos'];
@@ -146,22 +150,37 @@ function projectOpen(id) {
 	let catalogProject = catalog.querySelector(`[data-id="${id}"]`);
 	catalogProject.classList.add("catalog-item-featured");
 
-	// Open project content
+	// Bring in project details
 	projectContainer.style.pointerEvents = "all";
-	projectContent.style.transform = "translateY(0vh)";
-	projectShadow.style.opacity = .8;
+	projectContentImg.style.transform = "translateY(0%)";
+	projectContentInfo.style.transform = "translateY(0%)";
+	projectContentClose.style.transform = "scale(1)";
 
 	// Populate project content
 	let projectInfo = projects[id];
-	projectContentArtist.innerHTML = projectInfo["artist"];
-	projectContentTitle.innerHTML = projectInfo["piece"];
-	projectContentDescription.innerHTML = projectInfo["desc"];
+	projectContentImg.style.backgroundImage = `url("assets/photos/${projectInfo["img"]}")`;
+	projectContentDescription.innerHTML = `
+		<span class="project-content-credits"><strong>${projectInfo["artist"]}</strong><br>
+		<em>${projectInfo["piece"]}</em></span><br><br>
+		${projectInfo["desc"]}
+	`
+	projectContentLinks.innerHTML = "";
+	if (projectInfo["links"] == "") {
+		projectContentLinks.style.display = "none";
+	} else {
+		projectContentLinks.style.display = "flex";
+		for (let link of projectInfo["links"].split(",")) {
+			let info = link.split(" ");
+			projectContentLinks.innerHTML += `<a href="${info[1]}" target="_blank">${info[0]}</a>`
+		}
+	}
 }
 function projectClose() {
 	// Close project content
 	projectContainer.style.pointerEvents = "none";
-	projectContent.style.transform = "translateY(100vh)";
-	projectShadow.style.opacity = 0;
+	projectContentImg.style.transform = "translateY(-100%)";
+	projectContentInfo.style.transform = "translateY(100%)";
+	projectContentClose.style.transform = "scale(0)";
 
 	// Catalog update
 	let catalogProject = catalog.querySelector(`[data-id="${featuredProject}"]`);
@@ -200,7 +219,7 @@ function setBounds(x1, y1, x2, y2) {
 setBounds(0, 0, 3, 2);
 setBounds(0, 3, 2, 6);
 setBounds(0, 7, 1, 14);
-setBounds(0, 15, 2, 18);
+setBounds(0, 13, 2, 18);
 setBounds(6, 0, 7, 0);
 setBounds(12, 0, 41, 2);
 setBounds(12, 3, 35, 3);
@@ -208,6 +227,9 @@ setBounds(10, 4, 35, 10);
 setBounds(39, 10, 41, 15);
 setBounds(6, 18, 7, 18);
 setBounds(34, 16, 34, 18);
+setBounds(5, 11, 7, 13);
+setBounds(12, 14, 28, 15);
+setBounds(3, 17, 5, 18);
 
 // Add clickable movement
 let mapCells = map.querySelectorAll('.map-cell');
@@ -215,7 +237,9 @@ for (let cell of mapCells) {
 	if (cell.dataset.offlimits != "1") {
 		let targetPos = getPos(cell);
 		cell.addEventListener("click", () => {
-			setPosition(targetPos);
+			currentPos = targetPos;
+			resetPosition();
+			checkProject();
 		});
 	}
 }
@@ -236,19 +260,12 @@ let scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue
 let player = document.createElement("div");
 player.classList.add("map-player");
 window.addEventListener('resize', resetPosition);
-function setPosition(targetPos) {
-	currentPos = targetPos;
-	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
-	map.style.top = mapContainer.offsetHeight/2 - scale/2 - currentPos[1]*scale + "px";
-	map.style.left = mapContainer.offsetWidth/2 - scale/2 - currentPos[0]*scale + "px";
-	checkProject();
-}
 function resetPosition() {
+	scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
+	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
 	if (window.innerWidth > 800 && initialized == true) {
 		sidebar.dataset.active = "1";
 	}
-	scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
-	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
 	map.style.top = mapContainer.offsetHeight/2 - scale/2 - currentPos[1]*scale + "px";
 	map.style.left = mapContainer.offsetWidth/2 - scale/2 - currentPos[0]*scale + "px";
 }
@@ -318,6 +335,7 @@ let projectPositions = {}
 function populateMap(project) {
 	let indicator = document.createElement("div");
 	indicator.classList.add("map-indicator");
+	indicator.style.animation = `map-player ${Math.random()+1}s ease-in-out alternate infinite`;
 	let projectID = project["id"];
 	let projectType = project["category"];
 	if (projectType == "textile") {
@@ -334,9 +352,9 @@ function populateMap(project) {
 	let targetPos = project["pos"];
 	let targetNode = map.querySelector(`[data-pos="${targetPos}"]`);
 	projectPositions[targetPos] = projectID;
-	console.log(targetNode);
 	targetNode.appendChild(indicator);
 }
+
 
 
 // ————————————————————————————————————————————————————————————
