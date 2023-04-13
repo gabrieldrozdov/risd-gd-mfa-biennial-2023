@@ -162,8 +162,8 @@ function projectOpen(id) {
 	let projectInfo = projects[id];
 	projectContentImg.style.backgroundImage = `url("assets/photos/${projectInfo["img"]}")`;
 	projectContentDescription.innerHTML = `
-		<span class="project-content-credits"><strong>${projectInfo["artist"]}</strong><br>
-		<em>${projectInfo["piece"]}</em></span><br><br>
+		<p class="project-content-credits"><strong>${projectInfo["artist"]}</strong><br>
+		<em>${projectInfo["piece"]}</em></p>
 		${projectInfo["desc"]}
 	`
 	projectContentLinks.innerHTML = "";
@@ -239,6 +239,8 @@ for (let cell of mapCells) {
 			currentPos = targetPos;
 			resetPosition();
 			checkProject();
+			checkText();
+			checkPhoto();
 		});
 	}
 }
@@ -325,13 +327,16 @@ function move(direction) {
 		resetPosition();
 	}
 	checkProject();
+	checkText();
+	checkPhoto();
 }
 
 // Check if current position is on a project
 function checkProject() {
 	let keys = Object.keys(projectPositions);
-	if (keys.includes(`[${currentPos[0]},${currentPos[1]}]`)) {
-		projectOpen(projectPositions[`[${currentPos[0]},${currentPos[1]}]`]);
+	let pos = `[${currentPos[0]},${currentPos[1]}]`;
+	if (keys.includes(pos)) {
+		projectOpen(projectPositions[pos]);
 	} else {
 		projectClose();
 	}
@@ -370,7 +375,118 @@ function populateMap(project) {
 	projectPositions[targetPos] = projectID;
 	targetNode.appendChild(indicator);
 }
+function textOpen() {
 
+}
+
+// Populate text content
+let textContainer = document.querySelector(".text-container");
+let textContent = document.querySelector(".text-content");
+let textCloseBtn = document.querySelector(".text-close");
+let textActive = "";
+let texts = {
+	// "[4,0]": `
+	// 	Biennial credits
+	// `,
+	"[11,3]": `
+		<p style="color:var(--white)">From the graduate students of Graphic Design:</p>
+		<ol>
+			<li>We stand in complete solidarity with our deeply valued custodians, groundskeepers, and movers, and support their right to fair, living wages.</li>
+			<li>We will use our access to available resources to produce and disseminate posters, flyers, and other crucial materials created by strikers and student organizers.</li>
+			<li>We demand that RISD Administration act in concrete accordance with the values of our community, and practice the tenets of equity and inclusion the Institution allegedly supports.</li>
+		</ol>
+		<p>As a collective, we are disappointed in the poor administrative decisions that have brought our education to a standstill and broken our trust. We call for transparent communication that clarifies the process of negotiations and ask that the decision makers come forward and address our community.</p>
+		<p>With the opening of our Graduate Biennial, in lieu of traditional revelry, we offer our reception as gathering space in support of the needs of the ongoing strike.</p>
+		<p>Please know that our biennial will also serve as an information hub throughout the duration of the strike. We will be offering printing services daily. All files can be uploaded to <a href="https://drive.google.com/drive/folders/1BICq0SuTfGvucfNcyM5Q8G5KSq4vTQIw?usp=share_link" target="_blank">this link.</a></p>
+		<p>All printed materials will be available at the entrance of the Sol Koffler Gallery for the entire duration of the exhibition. Please spread the word that this space is intended for the larger public to learn of and support the ongoing strike efforts.</p>
+		<p>Everyone deserves a living wage.</p>
+		<p style="color:var(--white)">We stand with y’all—<br>GD MFA</p>
+	`
+}
+function populateText() {
+	let keys = Object.keys(texts);
+	for (let i=0; i<keys.length; i++) {
+		let indicator = document.createElement("div");
+		indicator.classList.add("map-indicator");
+		indicator.style.animation = `map-player ${Math.random()+1}s ease-in-out alternate infinite`;
+		indicator.innerHTML = '<svg viewBox="0 0 1000 1000"><path d="m653.39,116.85h-306.79c-126.89,0-229.75,102.86-229.75,229.75v306.79c0,126.89,102.86,229.75,229.75,229.75h306.79c126.89,0,229.75-102.86,229.75-229.75v-306.79c0-126.89-102.86-229.75-229.75-229.75Zm65.41,244.43c-25.02-46.48-60.06-64.36-114.4-64.36-22.17,0-42.91,2.86-62.92,8.58v387.56l68.65,11.44v45.77h-220.24v-45.77l68.65-11.44v-387.56c-20.02-5.72-40.76-8.58-62.92-8.58-54.35,0-89.39,17.88-114.41,64.36l-48.62-8.58,54.34-102.97h426.18l54.34,102.97-48.63,8.58Z"/></svg>';
+		let targetNode = map.querySelector(`[data-pos="${keys[i]}"]`);
+		targetNode.appendChild(indicator);
+	}
+}
+populateText();
+function textOpen() {
+	let text = texts[textActive];
+	let indicator = map.querySelector(`[data-pos="${textActive}"] .map-indicator`);
+	indicator.dataset.visited = "1";
+	textContainer.style.pointerEvents = "all";
+	textContent.style.transform = "translateX(0%)";
+	textCloseBtn.style.transform = "scale(1)";
+	textContent.innerHTML = text;
+}
+function textClose() {
+	// Close text content
+	textContainer.style.pointerEvents = "none";
+	textContent.style.transform = "translateX(-100%)";
+	textCloseBtn.style.transform = "scale(0)";
+}
+function checkText() {
+	let keys = Object.keys(texts);
+	let pos = `[${currentPos[0]},${currentPos[1]}]`;
+	if (keys.includes(pos)) {
+		textActive = pos;
+		textOpen();
+	} else {
+		textClose();
+	}
+}
+
+// Populate image content
+let photoContainer = document.querySelector(".photo-container");
+let photoContent = document.querySelector(".photo-content");
+let photoCloseBtn = document.querySelector(".photo-close");
+let photoActive = "";
+let photos = {
+	"[5,0]": `assets/photos/placeholder.svg`,
+	"[5,1]": `assets/photos/placeholder.svg`
+}
+function populatePhotos() {
+	let keys = Object.keys(photos);
+	for (let i=0; i<keys.length; i++) {
+		let indicator = document.createElement("div");
+		indicator.classList.add("map-indicator");
+		indicator.style.animation = `map-player ${Math.random()+1}s ease-in-out alternate infinite`;
+		indicator.innerHTML = '<svg viewBox="0 0 421.1 421.1"><path d="M262.4,230.9c0,28.6-23.2,51.9-51.9,51.9s-51.9-23.2-51.9-51.9s23.2-51.9,51.9-51.9S262.4,202.3,262.4,230.9"/><path d="M120.3,91.4H74.1c-4.2,0-7.7,3.5-7.7,7.7c0,4.2,3.5,7.7,7.7,7.7h46.1c4.2,0,7.7-3.5,7.7-7.7 C127.9,94.9,124.5,91.4,120.3,91.4z"/><path d="M366.5,101.8h-80.6c-7.1,0-13.4-4.6-15.7-11.3L266,73.3c-2.4-7.3-9.2-12.2-16.8-12.2H172 c-7.7,0-14.4,4.9-16.8,12.2L151,90.5c-2.2,6.7-8.5,11.3-15.7,11.3H54.7c-15.8,0-28.5,12.8-28.5,28.5v201.1 c0,15.8,12.8,28.5,28.5,28.5h311.8c15.8,0,28.5-12.8,28.5-28.5V130.3C395,114.6,382.2,101.8,366.5,101.8L366.5,101.8L366.5,101.8z M98.2,151c-8.5,0-15.4-6.9-15.4-15.4s6.9-15.4,15.4-15.4s15.4,6.9,15.4,15.4S106.6,151,98.2,151z M210.6,313.5 c-45.6,0-82.6-37-82.6-82.6s37-82.6,82.6-82.6s82.6,37,82.6,82.6S256.2,313.5,210.6,313.5L210.6,313.5z"/></svg>';
+		let targetNode = map.querySelector(`[data-pos="${keys[i]}"]`);
+		targetNode.appendChild(indicator);
+	}
+}
+populatePhotos();
+function photoOpen() {
+	let photo = photos[photoActive];
+	let indicator = map.querySelector(`[data-pos="${photoActive}"] .map-indicator`);
+	indicator.dataset.visited = "1";
+	photoContainer.style.pointerEvents = "all";
+	photoContent.style.transform = "translateX(0%)";
+	photoCloseBtn.style.transform = "scale(1)";
+	photoContent.style.backgroundImage = `url("${photo}")`;
+}
+function photoClose() {
+	// Close photo content
+	photoContainer.style.pointerEvents = "none";
+	photoContent.style.transform = "translateX(-100%)";
+	photoCloseBtn.style.transform = "scale(0)";
+}
+function checkPhoto() {
+	let keys = Object.keys(photos);
+	let pos = `[${currentPos[0]},${currentPos[1]}]`;
+	if (keys.includes(pos)) {
+		photoActive = pos;
+		photoOpen();
+	} else {
+		photoClose();
+	}
+}
 
 // ————————————————————————————————————————————————————————————
 // ————————————————————————————————————————————————————————————
