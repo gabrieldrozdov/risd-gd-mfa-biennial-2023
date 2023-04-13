@@ -146,9 +146,9 @@ function projectOpen(id) {
 	resetPosition();
 
 	// Catalog update
-	featuredProject = id;
-	let catalogProject = catalog.querySelector(`[data-id="${id}"]`);
-	catalogProject.classList.add("catalog-item-featured");
+	// featuredProject = id;
+	// let catalogProject = catalog.querySelector(`[data-id="${id}"]`);
+	// catalogProject.classList.add("catalog-item-featured");
 
 	// Bring in project details
 	projectContainer.style.pointerEvents = "all";
@@ -183,9 +183,9 @@ function projectClose() {
 	projectContentClose.style.transform = "scale(0)";
 
 	// Catalog update
-	let catalogProject = catalog.querySelector(`[data-id="${featuredProject}"]`);
-	catalogProject.classList.remove("catalog-item-featured");
-	featuredProject = 0;
+	// let catalogProject = catalog.querySelector(`[data-id="${featuredProject}"]`);
+	// catalogProject.classList.remove("catalog-item-featured");
+	// featuredProject = 0;
 }
 
 
@@ -275,23 +275,21 @@ resetPosition();
 body.addEventListener("keydown", checkKey);
 function checkKey(e) {
     e = e || window.event;
-	if (featuredProject == 0) {
-		if (e.keyCode == '38') { // up arrow
-			move('up');
-			buttonPress('up');
-		}
-		else if (e.keyCode == '40') { // down arrow
-			move('down');
-			buttonPress('down');
-		}
-		else if (e.keyCode == '37') { // left arrow
-			move('left');
-			buttonPress('left');
-		}
-		else if (e.keyCode == '39') { // right arrow
-			move('right');
-			buttonPress('right');
-		}
+	if (e.keyCode == '38') { // up arrow
+		move('up');
+		buttonPress('up');
+	}
+	else if (e.keyCode == '40') { // down arrow
+		move('down');
+		buttonPress('down');
+	}
+	else if (e.keyCode == '37') { // left arrow
+		move('left');
+		buttonPress('left');
+	}
+	else if (e.keyCode == '39') { // right arrow
+		move('right');
+		buttonPress('right');
 	}
 }
 
@@ -327,6 +325,8 @@ function checkProject() {
 	let keys = Object.keys(projectPositions);
 	if (keys.includes(`[${currentPos[0]},${currentPos[1]}]`)) {
 		projectOpen(projectPositions[`[${currentPos[0]},${currentPos[1]}]`]);
+	} else {
+		projectClose();
 	}
 }
 

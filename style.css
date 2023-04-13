@@ -441,7 +441,6 @@ body {
 	color: var(--pink-extralight);
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	grid-auto-flow: row;
 	pointer-events: none;
 }
 .project-content-img {
@@ -458,9 +457,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--pink-extradark);
+	background-color: rgba(150, 26, 94, .8);
 	transform: translateY(100%);
 	transition-delay: .2s;
+	overflow-y: scroll;
 	box-shadow: inset -20px -20px 30px var(--pink-dark), inset 20px 20px 30px rgba(0,0,0,.5);
 	transition: transform .6s cubic-bezier(0.76, 0, 0.24, 1);
 }
