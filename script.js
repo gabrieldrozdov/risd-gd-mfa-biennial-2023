@@ -409,7 +409,7 @@ function populateText() {
 		let indicator = document.createElement("div");
 		indicator.classList.add("map-indicator");
 		indicator.style.animation = `map-player ${Math.random()+1}s ease-in-out alternate infinite`;
-		indicator.innerHTML = '<svg viewBox="0 0 1000 1000"><path d="m653.39,116.85h-306.79c-126.89,0-229.75,102.86-229.75,229.75v306.79c0,126.89,102.86,229.75,229.75,229.75h306.79c126.89,0,229.75-102.86,229.75-229.75v-306.79c0-126.89-102.86-229.75-229.75-229.75Zm65.41,244.43c-25.02-46.48-60.06-64.36-114.4-64.36-22.17,0-42.91,2.86-62.92,8.58v387.56l68.65,11.44v45.77h-220.24v-45.77l68.65-11.44v-387.56c-20.02-5.72-40.76-8.58-62.92-8.58-54.35,0-89.39,17.88-114.41,64.36l-48.62-8.58,54.34-102.97h426.18l54.34,102.97-48.63,8.58Z"/></svg>';
+		indicator.innerHTML = '<svg viewBox="0 0 24 24"><path d="m14.65,6.41c0,.39.32.72.72.72h4.27s-.06-.08-.1-.12l-4.74-4.76s-.1-.08-.15-.13v4.29h0Z"/><path d="m19.64,8.57v11.52c0,.99-.81,1.79-1.8,1.79H6.16c-.99,0-1.8-.8-1.8-1.79V3.91c0-.99.81-1.79,1.8-1.79h7.02v4.95c0,.83.67,1.5,1.5,1.5h4.96Z"/></svg>';
 		let targetNode = map.querySelector(`[data-pos="${keys[i]}"]`);
 		targetNode.appendChild(indicator);
 	}
@@ -447,8 +447,8 @@ let photoContent = document.querySelector(".photo-content");
 let photoCloseBtn = document.querySelector(".photo-close");
 let photoActive = "";
 let photos = {
-	"[5,0]": `assets/photos/placeholder.svg`,
-	"[5,1]": `assets/photos/placeholder.svg`
+	// "[5,0]": `assets/photos/placeholder.svg`,
+	// "[5,1]": `assets/photos/placeholder.svg`
 }
 function populatePhotos() {
 	let keys = Object.keys(photos);

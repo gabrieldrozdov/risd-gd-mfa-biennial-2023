@@ -87,7 +87,7 @@ body {
 }
 .cursor img {
 	transform-origin: 0 0;
-	width: 50px;
+	width: 75px;
 	transition: .2s;
 	filter: drop-shadow(5px 5px 10px rgba(0,0,0,.2));
 }
