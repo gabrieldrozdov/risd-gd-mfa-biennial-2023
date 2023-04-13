@@ -140,15 +140,16 @@ let projectContentDescription = projectContainer.querySelector(".project-content
 let projectContentLinks = projectContainer.querySelector(".project-content-links");
 let projectContentClose = projectContainer.querySelector(".project-content-close");
 function projectOpen(id) {
+	featuredProject = id;
+
 	// Move player to correct location
 	let targetPos = projects[id]['pos'];
 	currentPos = getPosFromString(targetPos);
 	resetPosition();
 
-	// Catalog update
-	// featuredProject = id;
-	// let catalogProject = catalog.querySelector(`[data-id="${id}"]`);
-	// catalogProject.classList.add("catalog-item-featured");
+	// Map indicator update
+	let mapIndicator = map.querySelector(`[data-pos="${targetPos}"] .map-indicator`);
+	mapIndicator.dataset.visited = "1";
 
 	// Bring in project details
 	projectContainer.style.pointerEvents = "all";
@@ -157,6 +158,7 @@ function projectOpen(id) {
 	projectContentClose.style.transform = "scale(1)";
 
 	// Populate project content
+	projectContentDescription.scrollTop = 0;
 	let projectInfo = projects[id];
 	projectContentImg.style.backgroundImage = `url("assets/photos/${projectInfo["img"]}")`;
 	projectContentDescription.innerHTML = `
@@ -176,16 +178,13 @@ function projectOpen(id) {
 	}
 }
 function projectClose() {
+	featuredProject = 0;
+
 	// Close project content
 	projectContainer.style.pointerEvents = "none";
 	projectContentImg.style.transform = "translateY(-100%)";
 	projectContentInfo.style.transform = "translateY(100%)";
 	projectContentClose.style.transform = "scale(0)";
-
-	// Catalog update
-	// let catalogProject = catalog.querySelector(`[data-id="${featuredProject}"]`);
-	// catalogProject.classList.remove("catalog-item-featured");
-	// featuredProject = 0;
 }
 
 
@@ -262,12 +261,20 @@ player.classList.add("map-player");
 window.addEventListener('resize', resetPosition);
 function resetPosition() {
 	scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
-	map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`).appendChild(player);
+	let targetCell = map.querySelector(`[data-pos="[${currentPos[0]},${currentPos[1]}]`);
+	targetCell.appendChild(player);
 	if (window.innerWidth > 800 && initialized == true) {
 		sidebar.dataset.active = "1";
 	}
 	map.style.top = mapContainer.offsetHeight/2 - scale/2 - currentPos[1]*scale + "px";
 	map.style.left = mapContainer.offsetWidth/2 - scale/2 - currentPos[0]*scale + "px";
+
+
+	let trail = document.createElement("div");
+	trail.classList.add("map-trail");
+	if (targetCell.querySelector(".map-trail") == null) {
+		targetCell.appendChild(trail);
+	}
 }
 resetPosition();
 
@@ -339,22 +346,30 @@ function populateMap(project) {
 	let projectID = project["id"];
 	let projectType = project["category"];
 	if (projectType == "textile") {
-		indicator.innerHTML = '<img src="assets/ui/glyph-textile.svg">';
+		indicator.innerHTML = '<svg viewBox="0 0 282.49 282.49"><path d="m249.41,141.56c20.38-5.29,33.09-22.05,33.09-45.92,0-29.16-18.69-47.71-48.24-47.71-.12,0-.25,0-.37,0-5.53-20.1-22.33-32.26-46.26-32.26s-40.13,12.16-45.71,32.26c-.01,0-.03,0-.04,0-.3,0-.59.01-.88.02-.3,0-.6-.02-.9-.02-.12,0-.25,0-.37,0-5.53-20.1-22.33-32.26-46.26-32.26s-40.13,12.16-45.71,32.26c-.01,0-.03,0-.04,0C18.95,47.93,0,66.49,0,95.64c0,23.79,12.45,40.52,33.09,45.87C12.7,146.81,0,163.57,0,187.44c0,29.04,18.54,47.56,47.9,47.7,5.7,19.75,22.4,31.68,46.09,31.68s39.81-11.93,45.54-31.68c.36,0,.72.01,1.09.01.29,0,.57-.01.86-.02.19,0,.38.01.58.01,5.7,19.75,22.4,31.68,46.09,31.68s39.81-11.93,45.54-31.68c.36,0,.72.01,1.09.01,28.76,0,47.71-18.55,47.71-47.71,0-23.79-12.45-40.52-33.09-45.87Z"/></svg>';
 	} else if (projectType == "installation") {
-		indicator.innerHTML = '<img src="assets/ui/glyph-installation.svg">';
+		indicator.innerHTML = '<svg viewBox="0 0 282.5 282.5"><path d="M235.1,95.9c0-0.4,0-0.7,0-1.1c0-28.8-18.6-47.7-47.7-47.7c-23.8,0-40.5,12.5-45.9,33.1 c-5.3-20.4-22.1-33.1-45.9-33.1c-29.2,0-47.7,18.7-47.7,48.2c0,0.1,0,0.2,0,0.4c-20.1,5.5-32.3,22.3-32.3,46.3 s12.2,40.1,32.3,45.7c0,0,0,0,0,0c0,28.8,18.5,47.7,47.7,47.7c23.8,0,40.5-12.4,45.9-33.1c5.3,20.4,22.1,33.1,45.9,33.1 c29,0,47.6-18.5,47.7-47.9c19.8-5.7,31.7-22.4,31.7-46.1S254.9,101.6,235.1,95.9L235.1,95.9z"/></svg>';
 	} else if (projectType == "video") {
-		indicator.innerHTML = '<img src="assets/ui/glyph-video.svg">';
+		indicator.innerHTML = '<svg viewBox="0 0 282.49 282.49"><path d="m48.38,180.09c-.29,2.47-.44,5.02-.44,7.67,0,28.76,18.55,47.71,47.71,47.71,2.6,0,5.11-.15,7.53-.44,1.44,1.79,3.01,3.54,4.73,5.26,20.33,20.33,46.85,20.62,67.47,0,1.71-1.71,3.28-3.46,4.7-5.24,2.37.28,4.82.43,7.36.43,29.15,0,47.71-18.69,47.71-48.24,0-2.38-.13-4.7-.38-6.94,1.88-1.48,3.72-3.12,5.52-4.91,20.62-20.62,20.52-46.95-.38-67.84-1.71-1.71-3.46-3.27-5.24-4.69.32-2.56.48-5.23.48-7.99,0-28.76-18.55-47.71-47.71-47.71-2.76,0-5.42.17-7.99.5-1.47-1.84-3.09-3.66-4.86-5.43-20.33-20.33-46.85-20.62-67.47,0-1.72,1.72-3.3,3.49-4.73,5.29-2.18-.23-4.43-.35-6.74-.35-29.15,0-47.71,18.69-47.71,48.24,0,2.2.11,4.33.32,6.41-2.06,1.59-4.08,3.36-6.05,5.33-20.62,20.62-20.52,46.95.37,67.84,1.88,1.88,3.82,3.59,5.79,5.13Z"/></svg>';
 	} else if (projectType == "print") {
-		indicator.innerHTML = '<img src="assets/ui/glyph-print.svg">';
+		indicator.innerHTML = '<svg viewBox="0 0 282.49 282.49"><path d="m269.46,77.62c0-39.39-25.41-65.35-65.35-65.35-32.59,0-55.51,17.05-62.83,45.32-7.25-27.92-30.21-45.32-62.9-45.32C38.45,12.27,13.03,37.86,13.03,78.34c0,32.3,17.09,55.56,45.26,62.89-28.17,7.27-45.26,30.45-45.26,63.64,0,39.39,25.41,65.35,65.35,65.35,32.59,0,55.51-17.05,62.83-45.32,7.25,27.92,30.21,45.32,62.9,45.32,39.93,0,65.35-25.59,65.35-66.07,0-32.3-17.09-55.56-45.26-62.89,28.17-7.27,45.26-30.45,45.26-63.64Z"/></svg>';
 	} else if (projectType == "web") {
-		indicator.innerHTML = '<img src="assets/ui/glyph-web.svg">';
+		indicator.innerHTML = '<svg viewBox="0 0 282.49 282.49"><path d="m204.11,12.27c-38.46,0-63.45,23.75-65.24,61.66h-.04c-39.58,0-64.89,25.15-65.34,65.01-37.11,2.01-60.47,27.13-60.47,65.94s25.41,65.35,65.35,65.35,64.89-25.15,65.34-65.01c35.68-1.94,58.65-25.24,60.36-61.53.01,0,.03,0,.04,0,39.93,0,65.35-25.59,65.35-66.07S244.05,12.27,204.11,12.27Z"/></svg>';
 	}
 	let targetPos = project["pos"];
 	let targetNode = map.querySelector(`[data-pos="${targetPos}"]`);
+	indicator.addEventListener("mouseenter", () => {
+		let catalogProject = catalog.querySelector(`[data-id="${projectID}"]`);
+		catalogProject.classList.add('catalog-item-featured');
+		catalog.scrollTop = catalogProject.offsetTop;
+	})
+	indicator.addEventListener("mouseleave", () => {
+		let catalogProject = catalog.querySelector(`[data-id="${projectID}"]`);
+		catalogProject.classList.remove('catalog-item-featured');
+	})
 	projectPositions[targetPos] = projectID;
 	targetNode.appendChild(indicator);
 }
-
 
 
 // ————————————————————————————————————————————————————————————
