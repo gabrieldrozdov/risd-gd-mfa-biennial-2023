@@ -1,7 +1,7 @@
 {
   "0": {
     "id": "0",
-    "pos": "[0,0]",
+    "pos": "[19,18]",
     "artist": "Husna Abubakar",
     "category": "textile",
     "piece": "<em>Kanga #2</em>, 2022",
@@ -9,7 +9,7 @@
   },
   "1": {
     "id": "1",
-    "pos": "[0,0]",
+    "pos": "[15,11]",
     "artist": "Michelle Belgrod",
     "category": "installation",
     "piece": "Psychic Slice, 2022",
@@ -17,7 +17,7 @@
   },
   "2": {
     "id": "2",
-    "pos": "[0,0]",
+    "pos": "[3,7]",
     "artist": "Kate Brown",
     "category": "print",
     "piece": "Composition generator, 2022",
@@ -25,7 +25,7 @@
   },
   "3": {
     "id": "3",
-    "pos": "[0,0]",
+    "pos": "[32,11]",
     "artist": "Lydia Chodosh",
     "category": "web",
     "piece": "Spore Site, 2022",
@@ -33,7 +33,7 @@
   },
   "4": {
     "id": "4",
-    "pos": "[0,0]",
+    "pos": "[38,12]",
     "artist": "Ben Denzer",
     "category": "textile",
     "piece": "Two Hundred Eighty-Nine Dollar Quilt, 2022.",
@@ -41,7 +41,7 @@
   },
   "5": {
     "id": "5",
-    "pos": "[0,0]",
+    "pos": "[28,11]",
     "artist": "Gabriel Drozdov",
     "category": "web",
     "piece": "Pixel Weaver, 2022",
@@ -49,15 +49,15 @@
   },
   "6": {
     "id": "6",
-    "pos": "[0,0]",
+    "pos": "[4,12]",
     "artist": "Harshal Duddalwar",
     "category": "print",
     "piece": "Ponder, 2022",
-    "desc": "Ponder\" is a self-portrait installation composed of fragmented narratives drawn from my diary entries spanning a year. Each narrative is distilled into a few keywords and inscribed on calling cards, which are then interwoven to create a larger narrative that delves into and examines my identity and its influence on my professional work. The installation comprises two types of cards: single-sided cards that contain musings on my daily routine, and double-sided cards that feature questions on one side and counter-questions, answers, or affirmations on the other."
+    "desc": "“Ponder” is a self-portrait installation composed of fragmented narratives drawn from my diary entries spanning a year. Each narrative is distilled into a few keywords and inscribed on calling cards, which are then interwoven to create a larger narrative that delves into and examines my identity and its influence on my professional work. The installation comprises two types of cards: single-sided cards that contain musings on my daily routine, and double-sided cards that feature questions on one side and counter-questions, answers, or affirmations on the other."
   },
   "7": {
     "id": "7",
-    "pos": "[0,0]",
+    "pos": "[37,4]",
     "artist": "Jan Alec Figuracion",
     "category": "video",
     "piece": "Sugar Glass, 2022",
@@ -65,11 +65,11 @@
   },
   "8": {
     "id": "8",
-    "pos": "[0,0]",
+    "pos": "[33,17]",
     "artist": "Lian Fumerton-Liu & Joey Petrillo",
     "category": "installation",
     "piece": "ASCII Fridge, Hello World!, 2022",
-    "desc": "Welcome to our ecosystem for slowing down; a collaborative series of experiments hosted by us, Lian and Joey (ᵔ◡ᵔ✿)(ᵔ◡ᵔ★). We are thinking of these gestures and conversations as akin (and often literally) to taking a long, meandering walk. \n\nWe want to ask, can a moment of joy be radical?\nAnd, when is it done? Why does it have to be?"
+    "desc": "Welcome to our ecosystem for slowing down; a collaborative series of experiments hosted by us, Lian and Joey (ᵔ◡ᵔ✿)(ᵔ◡ᵔ★). We are thinking of these gestures and conversations as akin (and often literally) to taking a long, meandering walk. “We want to ask, can a moment of joy be radical?” And, when is it done? Why does it have to be?"
   },
   "9": {
     "id": "9",
@@ -81,7 +81,7 @@
   },
   "10": {
     "id": "10",
-    "pos": "[0,0]",
+    "pos": "[10,18]",
     "artist": "Serena Ho",
     "category": "print",
     "piece": "Emergence, Fractal, Lexicon, 2022",
@@ -89,15 +89,15 @@
   },
   "11": {
     "id": "11",
-    "pos": "[0,0]",
+    "pos": "[38,7]",
     "artist": "Ian Keliher",
     "category": "video",
     "piece": "Between, 2022",
-    "desc": "Between is a split-screen video comprised of interviews with Dougal Henken (GD MFA '23) and Sun Ho Lee (GD MFA '23) on the question of \"what is communication?\" along with an excerpt of \"What is Man?\" (1938) by Martin Buber."
+    "desc": "Between is a split-screen video comprised of interviews with Dougal Henken (GD MFA '23) and Sun Ho Lee (GD MFA '23) on the question of “what is communication?” along with an excerpt of “What is Man?” (1938) by Martin Buber."
   },
   "12": {
     "id": "12",
-    "pos": "[0,0]",
+    "pos": "[31,18]",
     "artist": "Kaela Kennedy",
     "category": "textile",
     "piece": "In A Field, 2022",
@@ -105,7 +105,7 @@
   },
   "13": {
     "id": "13",
-    "pos": "[0,0]",
+    "pos": "[34,11]",
     "artist": "Dohee Kim",
     "category": "web",
     "piece": "ALT Barrier 2022: Voice-Over-Text, 2022",
@@ -113,7 +113,7 @@
   },
   "14": {
     "id": "14",
-    "pos": "[0,0]",
+    "pos": "[7,16]",
     "artist": "Karan Kumar",
     "category": "print",
     "piece": "Three Stripes, 2022",
@@ -121,15 +121,15 @@
   },
   "15": {
     "id": "15",
-    "pos": "[0,0]",
+    "pos": "[26,11]",
     "artist": "Halim Lee",
     "category": "web",
     "piece": "Frozen Island, 2022",
-    "desc": "Frozen Island\" is an archive of frozen time on Google Maps. Selected captured moments are marked on the map, and viewers are invited to explore the island by dropping their Google Maps avatars on the island. This project is coded as a website but also translated into physical forms: 35mm film slides and print media. The publication, \"Frozen Island. Live,\" includes a set of postage stamps as a gift from Frozen Island. Each stamp is a mini-portal that includes an NFC tag. Viewers can travel to the place shown on the stamp by tagging it with their smartphone."
+    "desc": "“Frozen Island” is an archive of frozen time on Google Maps. Selected captured moments are marked on the map, and viewers are invited to explore the island by dropping their Google Maps avatars on the island. This project is coded as a website but also translated into physical forms: 35mm film slides and print media. The publication, “Frozen Island. Live,” includes a set of postage stamps as a gift from Frozen Island. Each stamp is a mini-portal that includes an NFC tag. Viewers can travel to the place shown on the stamp by tagging it with their smartphone."
   },
   "16": {
     "id": "16",
-    "pos": "[0,0]",
+    "pos": "[29,18]",
     "artist": "Soo Min Lee",
     "category": "textile",
     "piece": "#bfff00, 2023",
@@ -137,23 +137,23 @@
   },
   "17": {
     "id": "17",
-    "pos": "[0,0]",
+    "pos": "[22,18]",
     "artist": "Sun Ho Lee",
     "category": "textile",
     "piece": "Swish Swoosh, 2023",
-    "desc": "Swish Swoosh is a carrier bag of stories about Asian immigrants and bilingualism. We rapidly switch languages at home and in the outside world. The switch extends beyond just the language; different personality traits, beliefs, and levels of responsibilities are associated with each language we speak. \n\nThe project takes two forms: the knit and the book. The knit embodies how Asian immigrants weave in values and habits from their homes and the dominant ones in society that are heard more. The book delves into more personal stories: some took on the responsibility of an adult as a kid, translating at their grandpa’s doctor’s appointment. Some erased the pidgin accents they picked up in different countries. Some would pick up the phone in English at school even if it were from their family. Altogether, the stories create a glossary of the under-documented experiences of Asian immigrants."
+    "desc": "Swish Swoosh is a carrier bag of stories about Asian immigrants and bilingualism. We rapidly switch languages at home and in the outside world. The switch extends beyond just the language; different personality traits, beliefs, and levels of responsibilities are associated with each language we speak.<br><br>The project takes two forms: the knit and the book. The knit embodies how Asian immigrants weave in values and habits from their homes and the dominant ones in society that are heard more. The book delves into more personal stories: some took on the responsibility of an adult as a kid, translating at their grandpa’s doctor’s appointment. Some erased the pidgin accents they picked up in different countries. Some would pick up the phone in English at school even if it were from their family. Altogether, the stories create a glossary of the under-documented experiences of Asian immigrants."
   },
   "18": {
     "id": "18",
-    "pos": "[0,0]",
+    "pos": "[26,18]",
     "artist": "Jenni Oughton",
     "category": "textile",
     "piece": "The Space of Memory, 2022",
-    "desc": "If only we could admit memory is fallible and consciously rewrite it, would that provide space for a kinder relationship with one's past?\n\nThe Space of Memory was an exploration of the space between memory and reality. It mixes embroidered photos, beading, glitched tapestries, and melted embroideries created on water soluble materials. While on the surface, it asks people to recall the fragments of things they can no longer firmly  remember, it also explores the relationship between transness and memory. What is our relationship to memories when others see and remember us so differently from how we understand ourselves? And what is the value of consciously rewriting a memory? Memories slip and our subconscious changes them, making them into stories with their own lives. So what is to stop us from invading the space of memory to remember a version of you that feels more honest?"
+    "desc": "If only we could admit memory is fallible and consciously rewrite it, would that provide space for a kinder relationship with one's past?<br><br>The Space of Memory was an exploration of the space between memory and reality. It mixes embroidered photos, beading, glitched tapestries, and melted embroideries created on water soluble materials. While on the surface, it asks people to recall the fragments of things they can no longer firmly  remember, it also explores the relationship between transness and memory. What is our relationship to memories when others see and remember us so differently from how we understand ourselves? And what is the value of consciously rewriting a memory? Memories slip and our subconscious changes them, making them into stories with their own lives. So what is to stop us from invading the space of memory to remember a version of you that feels more honest?"
   },
   "19": {
     "id": "19",
-    "pos": "[0,0]",
+    "pos": "[11,11]",
     "artist": "Joey Petrillo",
     "category": "video",
     "piece": "Every Rose has its Thorns, 2021",
@@ -161,7 +161,7 @@
   },
   "20": {
     "id": "20",
-    "pos": "[0,0]",
+    "pos": "[18,14]",
     "artist": "Zoë Pulley",
     "category": "print",
     "piece": "a-story-in.parts, 2022",
@@ -169,7 +169,7 @@
   },
   "21": {
     "id": "21",
-    "pos": "[0,0]",
+    "pos": "[40,5]",
     "artist": "Sadia Quddus",
     "category": "video",
     "piece": "All the Colors of the Desert, 2022",
@@ -177,7 +177,7 @@
   },
   "22": {
     "id": "22",
-    "pos": "[0,0]",
+    "pos": "[30,11]",
     "artist": "Zach Scheinfeld",
     "category": "web",
     "piece": "Inbox Interpreter",
@@ -185,7 +185,7 @@
   },
   "23": {
     "id": "23",
-    "pos": "[0,0]",
+    "pos": "[6,13]",
     "artist": "Ingrid Schmaedecke",
     "category": "print",
     "piece": "A Tale of Lost Items",
@@ -193,7 +193,7 @@
   },
   "24": {
     "id": "24",
-    "pos": "[0,0]",
+    "pos": "[21,15]",
     "artist": "Ingrid Schmaedecke",
     "category": "print",
     "piece": "When does a project start?",
@@ -201,7 +201,7 @@
   },
   "25": {
     "id": "25",
-    "pos": "[0,0]",
+    "pos": "[4,15]",
     "artist": "Glikeriya Shotanova",
     "category": "installation",
     "piece": "New oil",
@@ -209,7 +209,7 @@
   },
   "26": {
     "id": "26",
-    "pos": "[0,0]",
+    "pos": "[38,18]",
     "artist": "Jack Tufts",
     "category": "print",
     "piece": "River Logic",
@@ -217,7 +217,7 @@
   },
   "27": {
     "id": "27",
-    "pos": "[0,0]",
+    "pos": "[23,11]",
     "artist": "Clinton Van Arnam",
     "category": "video",
     "piece": "On Noise, 2023",
@@ -225,18 +225,18 @@
   },
   "28": {
     "id": "28",
-    "pos": "[0,0]",
+    "pos": "[14,18]",
     "artist": "Shiyue Wang",
     "category": "installation",
     "piece": "Speak the Unspeakable, 2022",
-    "desc": "Clay is a stable medium for storing information and can preserve data for thousands of years, such as cuneiform. However, determining what information is worth archiving is a question that arises. China's authoritarian regime censors sensitive or dissenting content posted by people, prompting the archiving of unspeakable discussions and topics on Chinese social media. \"SPEAK the UNSPEAKABLE\" showcases the struggle between Chinese digital citizens and government censorship, with various ways developed to bypass censorship and discuss taboo topics. By scanning QR codes on clay tablets, you can explore China's digital social life and receive a guidebook on seven ways to bypass censorship."
+    "desc": "Clay is a stable medium for storing information and can preserve data for thousands of years, such as cuneiform. However, determining what information is worth archiving is a question that arises. China's authoritarian regime censors sensitive or dissenting content posted by people, prompting the archiving of unspeakable discussions and topics on Chinese social media. “SPEAK the UNSPEAKABLE” showcases the struggle between Chinese digital citizens and government censorship, with various ways developed to bypass censorship and discuss taboo topics. By scanning QR codes on clay tablets, you can explore China's digital social life and receive a guidebook on seven ways to bypass censorship."
   },
   "29": {
     "id": "29",
-    "pos": "[0,0]",
+    "pos": "[20,11]",
     "artist": "Rebecca Wilkinson",
     "category": "video",
     "piece": "Mechanick Exercises, 2022",
-    "desc": "Mechanick Exercises (2022), 3 mins 7 seconds\n\nPart video essay, part performance, this piece emerged from a close reading of Joseph Moxon’s 1678 book, Mechanick Exercises on The Whole Art of Printing. It explores the ever-changing relationships between the tools of design, technology, labour, and the body. The voiceover combines quotes from Moxon’s text with excerpts from Beatriz Colomina and Mark Wigley’s 2016 book,  Are We Human? Notes on an Archaeology of Design. \n\nThis piece is accompanied by a supplementary text as well as a set of cards that provide additional research and references on the topic.*\n\n*This is optional text depending on whether I include printed pieces in the installation. They can go on a table in front of the projection or on a small shelf on the wall. Not that this is how I installed the video at red-eye (see reference images here: https://drive.google.com/drive/folders/15U4rip2QknUA0ErjaqLb1zmC-QdJkpkF?usp=sharing )."
+    "desc": "Mechanick Exercises (2022), 3 mins 7 seconds<br><br>Part video essay, part performance, this piece emerged from a close reading of Joseph Moxon’s 1678 book, Mechanick Exercises on The Whole Art of Printing. It explores the ever-changing relationships between the tools of design, technology, labour, and the body. The voiceover combines quotes from Moxon’s text with excerpts from Beatriz Colomina and Mark Wigley’s 2016 book, <em>Are We Human? Notes on an Archaeology of Design.</em><br><br>This piece is accompanied by a supplementary text as well as a set of cards that provide additional research and references on the topic."
   }
 }

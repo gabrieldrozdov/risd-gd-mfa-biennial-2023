@@ -136,6 +136,11 @@ let projectContentArtist = projectContent.querySelector(".project-content-artist
 let projectContentTitle = projectContent.querySelector(".project-content-title");
 let projectContentDescription = projectContent.querySelector(".project-content-description");
 function projectOpen(id) {
+	// Move player to correct location
+	let targetPos = projects[id]['pos'];
+	currentPos = getPosFromString(targetPos);
+	resetPosition();
+
 	// Catalog update
 	featuredProject = id;
 	let catalogProject = catalog.querySelector(`[data-id="${id}"]`);
@@ -218,6 +223,10 @@ for (let cell of mapCells) {
 // Get x and y pos from cell string
 function getPos(cell) {
 	let targetPos = cell.dataset.pos.split(",");
+	return [parseInt(targetPos[0].slice(1)), parseInt(targetPos[1].slice(0, -1))];
+}
+function getPosFromString(text) {
+	let targetPos = text.split(",");
 	return [parseInt(targetPos[0].slice(1)), parseInt(targetPos[1].slice(0, -1))];
 }
 
