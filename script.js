@@ -33,6 +33,7 @@ let logo = document.querySelector(".logo");
 let sidebar = document.querySelector(".sidebar");
 let mobileControls = document.querySelector("#mobile-controls");
 let mobileHamburger = document.querySelector(".mobile-hamburger");
+let scoreBlock = document.querySelector(".score");
 let initialized = false;
 function initialize() {
 	letter.style.pointerEvents = "none";
@@ -52,6 +53,9 @@ function initialize() {
 	}, 2000)
 	setTimeout(() => {
 		mapContainer.style.transform = "scale(1)";
+		setTimeout(() => {
+			scoreBlock.style.transform = "scale(1)";
+		}, 3000)
 	}, 3000)
 	setTimeout(() => {
 		mobileHamburger.dataset.active = "1";
@@ -218,7 +222,7 @@ function setBounds(x1, y1, x2, y2) {
 setBounds(0, 0, 3, 2);
 setBounds(0, 3, 2, 6);
 setBounds(0, 7, 1, 14);
-setBounds(0, 13, 2, 18);
+setBounds(1, 13, 2, 17);
 setBounds(6, 0, 7, 0);
 setBounds(12, 0, 41, 2);
 setBounds(12, 3, 35, 3);
@@ -226,9 +230,11 @@ setBounds(10, 4, 35, 10);
 setBounds(39, 10, 41, 15);
 setBounds(6, 18, 7, 18);
 setBounds(34, 16, 34, 18);
-setBounds(5, 11, 7, 13);
-setBounds(12, 14, 28, 15);
-setBounds(3, 17, 5, 18);
+setBounds(5, 9, 7, 11);
+setBounds(12, 14, 24, 15);
+setBounds(6, 14, 7, 15);
+setBounds(5, 4, 6, 5);
+setBounds(27, 14, 30, 15);
 
 // Add clickable movement
 let mapCells = map.querySelectorAll('.map-cell');
@@ -259,6 +265,8 @@ function getPosFromString(text) {
 let currentPos = [10, 1];
 let scale = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--scale'));
 let player = document.createElement("div");
+let score = 0;
+let scoreTally = document.querySelector("#score-tally");
 player.classList.add("map-player");
 window.addEventListener('resize', resetPosition);
 function resetPosition() {
@@ -276,6 +284,15 @@ function resetPosition() {
 	trail.classList.add("map-trail");
 	if (targetCell.querySelector(".map-trail") == null) {
 		targetCell.appendChild(trail);
+		score++;
+		scoreTally.innerText = score;
+		if (score == 378) {
+			let winscreen = document.querySelector(".winscreen")
+			winscreen.style.transform = "scale(1)";
+			setTimeout(() => {
+				winscreen.style.transform = "scale(0)";
+			}, 6000)
+		}
 	}
 }
 resetPosition();
@@ -385,11 +402,25 @@ let textContent = document.querySelector(".text-content");
 let textCloseBtn = document.querySelector(".text-close");
 let textActive = "";
 let texts = {
-	// "[4,0]": `
-	// 	Biennial credits
-	// `,
 	"[11,3]": `
-		<p style="color:var(--white)">From the graduate students of Graphic Design:</p>
+		<p><strong>2023 MFA COHORT</strong></p>
+		<p><em>Husna Abubakar → <a href="https://michellebelgrod.com/" target="_blank">Michelle Belgrod</a> → <a href="https://emilybluedorn.com/" target="_blank">Emily Bluedorn</a> → Kate Brown → <a href="https://lydiachodosh.com/" target="_blank">Lydia Chodosh</a> → <a href="https://bendenzer.com/" target="_blank">Ben Denzer</a> → <a href="https://www.gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a> → <a href="https://harshald.com/" target="_blank">Harshal Duddalwar</a> → <a href="https://alecfiguracion.com/" target="_blank">Alec Figuracion</a> → <a href="https://www.lian.land/" target="_blank">Lian Fumerton-Liu</a> → <a href="https://decreation.studio/" target="_blank">Dougal Henken</a> → <a href="https://serenaho.work/" target="_blank">Serena Ho</a> → <a href="https://kaelamkennedy.com/" target="_blank">Kaela Kennedy</a> → <a href="http://iankeliher.com/" target="_blank">Ian Keliher</a> → Dohee Kim → Mina Kim → <a href="https://www.karankumar.online/" target="_blank">Karan Kumar</a> → <a href="https://leehalim.com/" target="_blank">Halim Lee</a> → <a href="https://sunho-lee.com/" target="_blank">Sun Ho Lee</a> → Soo Min Lee → <a href="https://moritzlonyay.design/" target="_blank">Moritz Lonyay</a> → <a href="https://claudiamdesigns.com/work" target="_blank">Claudia Morris</a> → <a href="http://www.jennioughton.com/" target="_blank">Jenni Oughton</a> → <a href="https://joey.design/" target="_blank">Joey Petrillo</a> → <a href="https://zoepulley.com/" target="_blank">Zoë Pulley</a> → <a href="https://sadia.space/" target="_blank">Sadia Quddus</a> → Elliott Romano → <a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a> → <a href="http://www.zachscheinfeld.com/" target="_blank">Zach Scheinfeld</a> → <a href="https://ischmaedecke.com/" target="_blank">Ingrid Schmaedecke</a> → Brooke Shary → Glikeriya Shotanova → <a href="https://jacktufts.design/" target="_blank">Jack Tufts</a> → <a href="https://www.clintonvanarnam.net/" target="_blank">Clinton Van Arnam</a> → Shiyue Wang → <a href="http://www.berettwilber.com/" target="_blank">Berett Wilber</a> → <a href="https://rebeccawilkinson.me/" target="_blank">Rebecca Wilkinson</a> → So Jung Yoon → <a href="https://thetinazhou.com/" target="_blank">Tina Zhou</a></em></p>
+		<br>
+		<p><strong>BIENNIAL CREDITS</strong></p>
+		<p><em>Identity</em> → Lydia Chodosh, Kaela Kennedy, Sun Ho Lee, Ingrid Schmaedecke</p>
+		<p><em>Leads</em> → Lydia Chodosh, Alec Figuracion, Kaela Kennedy, Soo Min Lee, Sun Ho Lee, Ingrid Schmaedecke, Shiyue Wang</p>
+		<p><em>Curatorial</em> → Lydia Chodosh & Shiyue Wang</p>
+		<p><em>Media</em> → Gabriel Drozdov & Alec Figuracion</p>
+		<p><em>Merch</em> → Michelle Belgrod</p>
+		<p><em>Spatial</em> → Soo Min Lee</p>
+		<p><em>Photography</em> → Berett Wilber</p>
+		<p><em>Additional Photograpy</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
+		<p><em>Website</em> → Gabriel Drozdov</p>
+		<br>
+		<p>Thank you to everyone who helped organize materials for the strike!</p>
+	`,
+	"[10,3]": `
+		<p>From the graduate students of Graphic Design:</p>
 		<ol>
 			<li>We stand in complete solidarity with our deeply valued custodians, groundskeepers, and movers, and support their right to fair, living wages.</li>
 			<li>We will use our access to available resources to produce and disseminate posters, flyers, and other crucial materials created by strikers and student organizers.</li>
@@ -400,7 +431,30 @@ let texts = {
 		<p>Please know that our biennial will also serve as an information hub throughout the duration of the strike. We will be offering printing services daily. All files can be uploaded to <a href="https://drive.google.com/drive/folders/1BICq0SuTfGvucfNcyM5Q8G5KSq4vTQIw?usp=share_link" target="_blank">this link.</a></p>
 		<p>All printed materials will be available at the entrance of the Sol Koffler Gallery for the entire duration of the exhibition. Please spread the word that this space is intended for the larger public to learn of and support the ongoing strike efforts.</p>
 		<p>Everyone deserves a living wage.</p>
-		<p style="color:var(--white)">We stand with y’all—<br>GD MFA</p>
+		<p>We stand with y’all—<br>GD MFA</p>
+	`,
+	"[3,6]": `
+		<p>The title “Permanent Collection” often pertains to the works of art owned by an institution, and representative of a distinct set of tastes and values established by that institution. <em>Highlights from the Impermanent Collection</em>, in form and content, positions itself outside any rigid set of significations. We do not want to suggest an oppositional stance; we prefer instead, an optimistic one.</p>
+		<p>The work in this exhibition represents only a small fraction of the work produced by the Graphic Design Graduate student cohort.</p>
+		<p>As the title indicates, it is merely the highlights. It boasts a diverse range of analog and digital outputs. Serialized publications, short films, typographic animations, interactive webscapes and woven textiles encapsulate a small collection of these outputs in simple terms.</p>
+		<p>We like the squishy stuff, the relics of the past prone to degradation, the hidden layers of pixelation that make up a screen. We use these affinities as conceptual ground for experimentation, as active surfaces for communication. These practices form connections; they generate community. We celebrate the process; we celebrate each other.</p>
+	`,
+	"[41,16]":  `
+		<p><strong>2023 MFA COHORT</strong></p>
+		<p><em>Husna Abubakar → <a href="https://michellebelgrod.com/" target="_blank">Michelle Belgrod</a> → <a href="https://emilybluedorn.com/" target="_blank">Emily Bluedorn</a> → Kate Brown → <a href="https://lydiachodosh.com/" target="_blank">Lydia Chodosh</a> → <a href="https://bendenzer.com/" target="_blank">Ben Denzer</a> → <a href="https://www.gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a> → <a href="https://harshald.com/" target="_blank">Harshal Duddalwar</a> → <a href="https://alecfiguracion.com/" target="_blank">Alec Figuracion</a> → <a href="https://www.lian.land/" target="_blank">Lian Fumerton-Liu</a> → <a href="https://decreation.studio/" target="_blank">Dougal Henken</a> → <a href="https://serenaho.work/" target="_blank">Serena Ho</a> → <a href="https://kaelamkennedy.com/" target="_blank">Kaela Kennedy</a> → <a href="http://iankeliher.com/" target="_blank">Ian Keliher</a> → Dohee Kim → Mina Kim → <a href="https://www.karankumar.online/" target="_blank">Karan Kumar</a> → <a href="https://leehalim.com/" target="_blank">Halim Lee</a> → <a href="https://sunho-lee.com/" target="_blank">Sun Ho Lee</a> → Soo Min Lee → <a href="https://moritzlonyay.design/" target="_blank">Moritz Lonyay</a> → <a href="https://claudiamdesigns.com/work" target="_blank">Claudia Morris</a> → <a href="http://www.jennioughton.com/" target="_blank">Jenni Oughton</a> → <a href="https://joey.design/" target="_blank">Joey Petrillo</a> → <a href="https://zoepulley.com/" target="_blank">Zoë Pulley</a> → <a href="https://sadia.space/" target="_blank">Sadia Quddus</a> → Elliott Romano → <a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a> → <a href="http://www.zachscheinfeld.com/" target="_blank">Zach Scheinfeld</a> → <a href="https://ischmaedecke.com/" target="_blank">Ingrid Schmaedecke</a> → Brooke Shary → Glikeriya Shotanova → <a href="https://jacktufts.design/" target="_blank">Jack Tufts</a> → <a href="https://www.clintonvanarnam.net/" target="_blank">Clinton Van Arnam</a> → Shiyue Wang → <a href="http://www.berettwilber.com/" target="_blank">Berett Wilber</a> → <a href="https://rebeccawilkinson.me/" target="_blank">Rebecca Wilkinson</a> → So Jung Yoon → <a href="https://thetinazhou.com/" target="_blank">Tina Zhou</a></em></p>
+		<br>
+		<p><strong>BIENNIAL CREDITS</strong></p>
+		<p><em>Identity</em> → Lydia Chodosh, Kaela Kennedy, Sun Ho Lee, Ingrid Schmaedecke</p>
+		<p><em>Leads</em> → Lydia Chodosh, Alec Figuracion, Kaela Kennedy, Soo Min Lee, Sun Ho Lee, Ingrid Schmaedecke, Shiyue Wang</p>
+		<p><em>Curatorial</em> → Lydia Chodosh & Shiyue Wang</p>
+		<p><em>Media</em> → Gabriel Drozdov & Alec Figuracion</p>
+		<p><em>Merch</em> → Michelle Belgrod</p>
+		<p><em>Spatial</em> → Soo Min Lee</p>
+		<p><em>Photography</em> → Berett Wilber</p>
+		<p><em>Additional Photograpy</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
+		<p><em>Website</em> → Gabriel Drozdov</p>
+		<br>
+		<p>Thank you to everyone who helped organize materials for the strike!</p>
 	`
 }
 function populateText() {
@@ -447,8 +501,45 @@ let photoContent = document.querySelector(".photo-content");
 let photoCloseBtn = document.querySelector(".photo-close");
 let photoActive = "";
 let photos = {
-	// "[5,0]": `assets/photos/placeholder.svg`,
-	// "[5,1]": `assets/photos/placeholder.svg`
+	"[11,0]": `assets/photos/mainwall.jpg`,
+	"[9,0]": `assets/photos/event-strikewall.jpg`,
+	"[8,0]": `assets/photos/event-lobby.jpg`,
+	"[10,0]": `assets/photos/event-strike.jpg`,
+	"[11,1]": `assets/photos/event-djs.jpg`,
+	"[11,14]": `assets/photos/event-booktable1.jpg`,
+	"[25,14]": `assets/photos/event-booktable2.jpg`,
+	"[4,0]": `assets/photos/event-frontcorner.jpg`,
+	"[17,11]": `assets/photos/event-roses.jpg`,
+	"[15,18]": `assets/photos/event-husna.jpg`,
+	"[39,9]": `assets/photos/event-films.jpg`,
+	"[35,14]": `assets/photos/event-hall.jpg`,
+	"[14,13]": `assets/photos/booktable1.jpg`,
+	"[18,13]": `assets/photos/booktable2.jpg`,
+	"[22,13]": `assets/photos/booktable3.jpg`,
+	"[14,16]": `assets/photos/booktable6.jpg`,
+	"[18,16]": `assets/photos/booktable5.jpg`,
+	"[22,16]": `assets/photos/booktable4.jpg`,
+	"[7,17]": `assets/photos/digitalexhibition.jpg`,
+	"[0,15]": `assets/photos/outside.jpg`,
+	"[11,15]": `assets/photos/booktables.jpg`,
+	"[10,18]": `assets/photos/event-pizza.jpg`,
+	"[7,4]": `assets/photos/arrow1.jpg`,
+	"[6,7]": `assets/photos/mainspace.jpg`,
+	"[3,5]": `assets/photos/vinylwall.jpg`,
+	"[2,9]": `assets/photos/vinylaudience.jpg`,
+	"[9,8]": `assets/photos/assholes.jpg`,
+	"[7,5]": `assets/photos/pointers.jpg`,
+	"[38,12]": `assets/photos/moneydetail.jpg`,
+	"[33,16]": `assets/photos/asciidetail.jpg`,
+	"[36,10]": `assets/photos/cloudfilm.jpg`,
+	"[21,11]": `assets/photos/event-eva.jpg`,
+	"[19,18]": `assets/photos/event-sunho.jpg`,
+	"[41,18]": `assets/photos/floorplan.jpg`,
+	"[3,16]": `assets/photos/detail-glikeriya.jpg`,
+	"[31,12]": `assets/photos/event-computers.jpg`,
+	"[21,17]": `assets/photos/event-friends.jpg`,
+	"[6,13]": `assets/photos/detail-threestripes.jpg`,
+	"[37,18]": `assets/photos/detail-river.jpg`,
 }
 function populatePhotos() {
 	let keys = Object.keys(photos);
