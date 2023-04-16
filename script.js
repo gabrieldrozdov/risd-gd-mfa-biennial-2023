@@ -414,7 +414,7 @@ let texts = {
 		<p><em>Merch</em> → Michelle Belgrod</p>
 		<p><em>Spatial</em> → Soo Min Lee</p>
 		<p><em>Photography</em> → Berett Wilber</p>
-		<p><em>Additional Photograpy</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
+		<p><em>Additional Photography</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
 		<p><em>Website</em> → Gabriel Drozdov</p>
 		<br>
 		<p>Thank you to everyone who helped organize materials for the strike!</p>
@@ -451,7 +451,7 @@ let texts = {
 		<p><em>Merch</em> → Michelle Belgrod</p>
 		<p><em>Spatial</em> → Soo Min Lee</p>
 		<p><em>Photography</em> → Berett Wilber</p>
-		<p><em>Additional Photograpy</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
+		<p><em>Additional Photography</em> → Lydia Chodosh, Gabriel Drozdov, Ingrid Schmaedecke</p>
 		<p><em>Website</em> → Gabriel Drozdov</p>
 		<br>
 		<p>Thank you to everyone who helped organize materials for the strike!</p>
