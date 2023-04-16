@@ -114,7 +114,7 @@ body {
 }
 .logo[data-transition="1"] {
 	top: 100px;
-	left: calc(100% - 140px);
+	left: calc(100% - 120px);
 	width: 200px;
 	height: 168px;
 }
