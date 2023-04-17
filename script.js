@@ -481,8 +481,8 @@ let texts = {
 		<p><strong><a href="https://joey.design/" target="_blank">Joey Petrillo</a></strong> → <em>Fantasies and/or Realities</em>, 2022</p>
 		<p><strong><a href="https://zoepulley.com/" target="_blank">Zoë Pulley</a></strong> → <em>Black Joy Archive</em></p>
 		<p><strong><a href="https://sadia.space/" target="_blank">Sadia Quddus</a></strong> → <em>Memory, Heritage, Identity: Engaging With a Personal Inheritance</em></p>
-		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a>Vishakha Ruhela</a></strong> → <em>Cosmic</em>, 2023</p>
-		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a>Vishakha Ruhela</a></strong> → <em>Unraveling Typography</em>, 2022</p>
+		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/" target="_blank">Vishakha Ruhela</a></strong> → <em>Cosmic</em>, 2023</p>
+		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/" target="_blank">Vishakha Ruhela</a></strong> → <em>Unraveling Typography</em>, 2022</p>
 		<p><strong>Brooke Shary</strong> → <em>Swivel</em></p>
 		<p><strong>Shiyue Wang</strong> → <em>Seeing the Invisibles</em></p>
 		<p><strong><a href="https://rebeccawilkinson.me/" target="_blank">Rebecca Wilkinson</a></strong> → <em>Saturn’s Rings</em>, 2022</p>
