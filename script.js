@@ -251,6 +251,15 @@ for (let cell of mapCells) {
 	}
 }
 
+// Change position to publication pos
+function gotoPublication() {
+	currentPos = [25, 15];
+	resetPosition();
+	checkProject();
+	checkText();
+	checkPhoto();
+}
+
 // Get x and y pos from cell string
 function getPos(cell) {
 	let targetPos = cell.dataset.pos.split(",");
@@ -455,6 +464,32 @@ let texts = {
 		<p><em>Website</em> → Gabriel Drozdov</p>
 		<br>
 		<p>Thank you to everyone who helped organize materials for the strike!</p>
+	`,
+	"[25,15]":  `
+		<p><strong>PUBLICATION TABLE</strong></p>
+		<p><strong>Husna Abubakar</strong> → <em>Wintersession Zine</em>, 2022</p>
+		<p><strong>Kate Brown</strong> → <em>Every Letter Walks</em>, 2022</p>
+		<p><strong><a href="https://lydiachodosh.com/" target="_blank">Lydia Chodosh</a></strong> → <em>Plot Lines</em>, 2022</p>
+		<p><strong><a href="https://bendenzer.com/" target="_blank">Ben Denzer</a></strong> → <em>Lewis and Clark</em>, 2022</p>
+		<p><strong><a href="https://alecfiguracion.com/" target="_blank">Alec Figuracion</a></strong> → <em>Redacted</em>, 2022</p>
+		<p><strong><a href="https://www.lian.land/" target="_blank">Lian Fumerton-Liu</a></strong> → <em>Little Thoughts for Getting Lost</em>, 2022</p>
+		<p><strong><a href="https://www.lian.land/" target="_blank">Lian Fumerton-Liu</a> & <a href="https://joey.design/" target="_blank">Joey Petrillo</a></strong> → <em>Zine + Holiday Bookmark</em>, 2022</p>
+		<p><strong><a href="http://iankeliher.com/" target="_blank">Ian Keliher</a></strong> → <em>Now and Then</em>, 2022</p>
+		<p><strong><a href="https://kaelamkennedy.com/" target="_blank">Kaela Kennedy</a></strong> → <em>Silent Spring</em>, 2022</p>
+		<p><strong><a href="https://sunho-lee.com/" target="_blank">Sun Ho Lee</a></strong> → <em>Is This A Typo</em>, 2022</p>
+		<p><strong><a href="http://www.jennioughton.com/" target="_blank">Jenni Oughton</a></strong> → <em>You Ought to Add More Salt</em>, 2022</p>
+		<p><strong><a href="https://joey.design/" target="_blank">Joey Petrillo</a></strong> → <em>Fantasies and/or Realities</em>, 2022</p>
+		<p><strong><a href="https://zoepulley.com/" target="_blank">Zoë Pulley</a></strong> → <em>Black Joy Archive</em></p>
+		<p><strong><a href="https://sadia.space/" target="_blank">Sadia Quddus</a></strong> → <em>Memory, Heritage, Identity: Engaging With a Personal Inheritance</em></p>
+		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a>Vishakha Ruhela</a></strong> → <em>Cosmic</em>, 2023</p>
+		<p><strong><a href="https://www.instagram.com/curious_case_of_a_cancerian/"> target="_blank">Vishakha Ruhela</a>Vishakha Ruhela</a></strong> → <em>Unraveling Typography</em>, 2022</p>
+		<p><strong>Brooke Shary</strong> → <em>Swivel</em></p>
+		<p><strong>Shiyue Wang</strong> → <em>Seeing the Invisibles</em></p>
+		<p><strong><a href="https://rebeccawilkinson.me/" target="_blank">Rebecca Wilkinson</a></strong> → <em>Saturn’s Rings</em>, 2022</p>
+		<p><strong>So Jung Yoon</strong> → <em>Disintegrated Records</em>, 2023</p>
+		<p><strong><a href="https://thetinazhou.com/" target="_blank">Tina Zhou</a></strong> → <em>What’s in a Name</em>, 2022</p>
+		<p><strong>Collective Class of 2023</strong> → <em>At Last</em>, 2021</p>
+		<p><strong>Collective Class of 2024</strong> → <em>Atlas</em>, 2022</p>
 	`
 }
 function populateText() {
