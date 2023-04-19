@@ -437,6 +437,7 @@ body {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	transition: transform .5s ease-in-out;
+	display: none;
 }
 .letter-content {
 	display: flex;

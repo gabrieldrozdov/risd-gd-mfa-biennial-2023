@@ -61,6 +61,7 @@ function initialize() {
 		mobileHamburger.dataset.active = "1";
 	}, 3000)
 }
+initialize();
 
 
 
