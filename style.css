@@ -532,7 +532,7 @@ body {
 	background-color: var(--pink-extradark);
 	transform: translateY(100%);
 	transition-delay: .2s;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	box-shadow: inset -20px -20px 30px var(--pink-dark), inset 20px 20px 30px rgba(0,0,0,.5);
 	transition: transform .6s cubic-bezier(0.76, 0, 0.24, 1);
 }
@@ -551,6 +551,21 @@ body {
 	padding: 40px;
 	overflow-y: scroll;
 	height: 100%;
+}
+.project-content-description::-webkit-scrollbar {
+	width: 20px;
+}
+.project-content-description::-webkit-scrollbar-track {
+	background: var(--pink-extradark);
+	box-shadow: inset -5px -5px 10px var(--pink-extradark), inset 5px 5px 10px var(--pink-light);
+}
+.project-content-description::-webkit-scrollbar-thumb {
+	background: var(--pink-light);
+	box-shadow: inset -5px -5px 10px var(--pink-extradark), inset 5px 5px 10px var(--pink-light);
+	border-radius: 10px;
+}
+.project-content-description::-webkit-scrollbar-thumb:hover {
+	background: var(--white);
 }
 .project-content-links {
 	display: flex;
