@@ -50,7 +50,6 @@
 	--pink-extralight: #fcc7e4;
 	--white: #fafafa;
 	--gray: #7d7d7d;
-	--doc-height: 100%;
 	--scale: 80px;
 }
 body {
@@ -60,7 +59,7 @@ body {
 }
 
 /* Scrollbar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 20px;
 }
 ::-webkit-scrollbar-track {
@@ -74,7 +73,7 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--white);
-} */
+}
 
 /* CURSOR */
 .cursor {
@@ -429,7 +428,7 @@ body {
 /* INTRO LETTER */
 .letter-container {
 	width: 100vw;
-	height: var(--doc-height);
+	height: 100dvh;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -504,7 +503,7 @@ body {
 /* PROJECT POPUP */
 .project-container {
 	width: 500px;
-	height: var(--doc-height);
+	height: 100dvh;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -617,7 +616,7 @@ body {
 .text-container, .photo-container {
 	width: 500px;
 	font-weight: 300;
-	height: var(--doc-height);
+	height: 100dvh;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -729,7 +728,7 @@ body {
 	left: 0;
 	z-index: 1001;
 	width: 100vw;
-	height: var(--doc-height);
+	height: 100dvh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -830,7 +829,7 @@ body {
 	}
 	.container {
 		grid-template-columns: 1fr;
-		height: var(--doc-height);
+		height: 100dvh;
 	}
 	.logo[data-transition="1"] {
 		top: 70px;
@@ -853,7 +852,7 @@ body {
 	.map-container {
 		position: absolute;
 		width: 100vw;
-		height: calc(var(--doc-height) - 150px);
+		height: calc(100dvh - 150px);
 		top: 0;
 		left: 0;
 	}
